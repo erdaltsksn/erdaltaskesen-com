@@ -1,0 +1,58 @@
+//----------------------- LAYOUT ---------------------------------------------//
+$spacer: 1rem;
+
+//----------------------- COLORS ---------------------------------------------//
+$transparent: rgba(255, 255, 255, 0);
+$black: #0e140e;
+$white: #fff;
+$grey: #eee;
+// Theme colors
+$primary: #3b8bba;
+$blue: #1ba0db;
+$green: #40a647;
+$yellow: #eec617;
+$red: #e02926;
+
+//----------------------- FONTS ----------------------------------------------//
+$font-family-base: // Safari for OS X and iOS (San Francisco)
+                   -apple-system,
+                   // Chrome < 56 for OS X (San Francisco)
+                   BlinkMacSystemFont,
+                   // Windows
+                   'Segoe UI',
+                   // Android
+                   'Roboto',
+                   // Ubuntu
+                   'Ubuntu',
+                   // Gnome
+                   'Cantarell',
+                   // KDE Plasma
+                   'Noto Sans',
+                   // Basic web fallback
+                   'Helvetica Neue',
+                   Arial,
+                   sans-serif,
+                   // macOS emoji
+                   'Apple Color Emoji',
+                   // Windows emoji
+                   'Segoe UI Emoji',
+                   'Segoe UI Symbol',
+                   // Linux emoji
+                   'Noto Color Emoji';
+
+$font-family-monospace: // macOS
+                        'SFMono-Regular',
+                        'Menlo',
+                        // Windows
+                        'Consolas',
+                        // Android
+                        'Roboto Mono',
+                        // Ubuntu
+                        'Ubuntu Monospace',
+                        // KDE
+                        'Noto Mono',
+                        'Oxygen Mono',
+                        // Linux/OpenOffice fallback
+                        'Liberation Mono',
+                        // Fallback
+                        monospace;

@@ -1,0 +1,23 @@
+linters:
+  HexNotation:
+    enabled: true
+    style: lowercase # or 'uppercase'
+  ImportantRule:
+    enabled: false
+  Indentation:
+    enabled: true
+    allow_non_nested_indentation: false
+    character: space # or 'tab'
+    width: 4
+  PropertySortOrder:
+    enabled: false
+    ignore_unspecified: false
+    min_properties: 2
+    separate_groups: true
+  QualifyingElement:
+    enabled: true
+    allow_element_with_attribute: true
+    allow_element_with_class: false
+    allow_element_with_id: false
+  SingleLinePerSelector:
+    enabled: false

@@ -1,0 +1,25 @@
+{
+    "MD003": {
+        "style": "atx"
+    },
+    "MD004": {
+        "style": "dash"
+    },
+    "MD013": {
+        "line_length": 120,
+        "code_blocks": false,
+        "tables": false
+    },
+    "MD024": {
+        "siblings_only": true
+    },
+    "MD026": {
+        "punctuation": ".,;:"
+    },
+    "MD029": {
+        "style": "ordered"
+    },
+    "MD035": {
+        "style": "---"
+    }
+}

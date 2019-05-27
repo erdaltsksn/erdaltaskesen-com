@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="post-single">
+    <h1 class="page-title">{{ .Title }}</h1>
+    <span class="post-created">{{ .Date.Format "02 January 2006" }}</span>
+    <div class="post-body">{{ .Content }}</div>
+
+    <section class="tagcloud">
+        <span class="tagcloud-label">Tags:</span>
+        {{ range .Params.tags }}
+        <a href="/blog/tag/{{ . }}" class="tagcloud-tag">{{ . }}</a>
+        {{ end }}
+    </section>
+</article>
+{{ end }}

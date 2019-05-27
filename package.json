@@ -1,0 +1,36 @@
+{
+  "name": "erdaltaskesen-com",
+  "version": "0.1.0",
+  "description": "Erdal's Personal website",
+  "author": "Erdal TAŞKESEN",
+  "homepage": "https://github.com/erdaltsksn/erdaltaskesen-com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erdaltsksn/erdaltaskesen-com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/erdaltsksn/erdaltaskesen-com/issues"
+  },
+  "license": "See LICENSE in https://raw.githubusercontent.com/erdaltsksn/erdaltaskesen-com/master/LICENSE",
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "autoprefixer": "*",
+    "clean-css-cli": "*",
+    "csscomb": "*",
+    "foreach-cli": "*",
+    "node-sass": "*",
+    "postcss-cli": "*"
+  },
+  "scripts": {
+    "csscomb": "csscomb ./assets/styles/",
+    "sass": "node-sass -o ./static/styles/ ./assets/styles/",
+    "autoprefixer": "npx postcss ./static/styles/*.css --use autoprefixer -d ./static/styles/",
+    "cleancss": "foreach -g './static/styles/*.css' -x 'cleancss #{path} -o #{path}'",
+    "buildcss": "npm run csscomb; npm run sass; npm run autoprefixer; npm run cleancss",
+    "build": "npm run buildcss",
+    "build-dev": "npm run build; hugo server",
+    "build-prod": "npm run build; hugo"
+  }
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>{{ .Title }}</title>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/images/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/images/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/favicons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-128.png" sizes="128x128" />
+    <link rel="icon" type="image/png" href="/images/favicons/favicon-196x196.png" sizes="196x196" />
+    <meta name="application-name" content="{{ .Site.Title }}" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="/images/favicons/mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="/images/favicons/mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="/images/favicons/mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="/images/favicons/mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="/images/favicons/mstile-310x310.png" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        integrity="sha256-BtbhCIbtfeVWGsqxk1vOHEYXS6qcvQvLMZqjtpWUEx8=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/solarized-dark.min.css" />
+    <!-- RSS Links -->
+    <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="/rss.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <a href="/" class="logo">
+                <img src="/images/logo-mobile.svg" alt="{{ .Site.Title }}" class="logo-mobile">
+                <img src="/images/logo-desktop.svg" alt="{{ .Site.Title }}" class="logo-desktop">
+            </a>
+            <nav class="primary-nav">
+                <ul class="primary-nav-list">
+                    <li class="primary-nav-item">
+                        <a href="/" class="primary-nav-link mario-blue">HOME</a>
+                    </li>
+                    <li class="primary-nav-item">
+                        <a href="/projects/" class="primary-nav-link mario-green">PROJECTS</a>
+                    </li>
+                    <li class="primary-nav-item">
+                        <a href="/blog/" class="primary-nav-link mario-yellow">BLOG</a>
+                    </li>
+                    <li class="primary-nav-item">
+                        <a href="/contact/" class="primary-nav-link mario-red">CONTACT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="main">
+            {{ block "main" . }}{{ end }}
+        </main>
+
+        <footer class="footer">
+            <div class="social">
+                <a href="https://www.linkedin.com/in/erdaltsksn" target="_blank" class="social-link">
+                    <i class="mario-blue fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/erdaltsksn" target="_blank" class="social-link">
+                    <i class="mario-green fab fa-github-square"></i>
+                </a>
+                <a href="https://www.facebook.com/erdaltsksn" target="_blank" class="social-link">
+                    <i class="mario-yellow fab fa-facebook-square"></i>
+                </a>
+                <a href="https://www.instagram.com/erdaltsksn" target="_blank" class="social-link">
+                    <i class="mario-red fab fa-instagram"></i>
+                </a>
+                <a href="https://twitter.com/erdaltsksn" target="_blank" class="social-link">
+                    <i class="mario-yellow fab fa-twitter-square"></i>
+                </a>
+                <a href="mailto:contact@erdaltaskesen.com" class="social-link">
+                    <i class="mario-green fas fa-envelope-square"></i>
+                </a>
+                <a href="/rss.xml" class="social-link">
+                    <i class="mario-blue fas fa-rss-square"></i>
+                </a>
+            </div>
+            <p class="copyright">
+                <span class="copyright-line">Copyright © 1988-{{ now.Format "2006"}} by <a
+                        href="/"><strong>{{ .Site.Title }}</strong></a>.</span>
+                <span class="copyright-line">All Rights Reserved.</span>
+            </p>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    {{ range .Site.Params.highlightLanguages }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/{{ . }}.min.js"></script>
+    {{ end }}
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</body>
+
+</html>

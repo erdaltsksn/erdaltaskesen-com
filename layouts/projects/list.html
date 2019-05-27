@@ -1,0 +1,24 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title | upper }}</h1>
+
+<div class="projects">
+    {{ range .Pages.ByParam "weight" }}
+    <article class="project">
+        <h2 class="project-title">
+            <a href="{{ .Params.repository }}" target="_blank" class="project-link--title">
+                {{ .Title }}
+            </a>
+        </h2>
+        {{if .Params.active }}
+        <aside class="project-status active">Actively working on</aside>
+        {{ else }}
+        <aside class="project-status passive">No longer maintained</aside>
+        {{ end }}
+        <a href="{{ .Params.repository }}" target="_blank" class="project-link--image">
+            <img src="{{ .Params.image }}" alt="{{ .Title }}" class="project-image">
+        </a>
+        <div class="project-description">{{ .Content }}</div>
+    </article>
+    {{ end }}
+</div>
+{{ end }}

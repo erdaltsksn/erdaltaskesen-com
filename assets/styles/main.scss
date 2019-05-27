@@ -1,0 +1,349 @@
+@import 'variables';
+@import 'base';
+
+//----------------------- BASE -----------------------------------------------//
+
+.mario-blue {
+    color: $blue;
+    background: $blue;
+}
+
+.mario-green {
+    color: $green;
+    background: $green;
+}
+
+.mario-yellow {
+    color: $yellow;
+    background: $yellow;
+}
+
+.mario-red {
+    color: $red;
+    background: $red;
+}
+
+body {
+    background: $white url('/images/bg-pattern.png');
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+//----------------------- HEADER ---------------------------------------------//
+
+.logo {
+    margin: 2.5% 0 0;
+    padding: ($spacer / 2);
+
+    display: block;
+}
+
+.logo-mobile {
+    display: block;
+}
+
+.logo-desktop {
+    display: none;
+}
+
+@media (min-width : 575px) {
+    .logo-mobile {
+        display: none;
+    }
+
+    .logo-desktop {
+        display: block;
+    }
+}
+
+.primary-nav-list {
+    margin: 0 auto;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+
+    list-style-type: none;
+}
+
+@media (min-width : 470px) {
+    .primary-nav-list {
+        flex-direction: row;
+    }
+}
+
+.primary-nav-item {
+    flex: 1;
+}
+
+.primary-nav-link {
+    padding: (1.5 * $spacer) $spacer;
+
+    display: block;
+
+    color: $grey;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.primary-nav-link:hover {
+    box-shadow: inset 0 ($spacer / -2) 0 0 $black;
+
+    text-decoration: none;
+}
+
+//----------------------- MAIN -----------------------------------------------//
+
+.main {
+    padding: $spacer 5%;
+
+    background: $white;
+}
+
+.page-title {
+    border-bottom: ($spacer / 2) dotted $grey;
+
+    font-family: monospace;
+    font-size: 4em;
+}
+
+//----------------------- FOOTER ---------------------------------------------//
+
+.social {
+    padding: ($spacer / 5);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    background: $grey;
+}
+
+.social-link {
+    padding: 0 ($spacer / 5);
+
+    font-size: 3.5rem;
+
+    >[class^='fa-'], >[class*=' fa-'] {
+        background: none;
+    }
+}
+
+.copyright {
+    margin: 0;
+    padding: $spacer;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.copyright-line {
+    padding: 0 ($spacer / 10);
+}
+
+//----------------------- NOT FOUND ------------------------------------------//
+
+.not-found {
+    text-align: center;
+}
+
+.not-found-emoji {
+    font-size: 5rem;
+}
+
+.not-found-text {
+    font-size: 2rem;
+}
+
+//----------------------- HOME -----------------------------------------------//
+
+.profile {
+    margin: 2.5% 0 0;
+}
+
+.profile-image {
+    margin: auto;
+    border: ($spacer / 1.25) solid $grey;
+    border-radius: 50%;
+    max-width: 300px;
+}
+
+.profile-info {
+    margin: $spacer 0 0;
+
+    text-align: center;
+}
+
+.profile-info-name {
+    margin: 0;
+
+    font-family: monospace;
+    font-size: 4em;
+    word-spacing: -.3em;
+}
+
+.profile-info-title {
+    font-size: 1.25em;
+}
+
+//----------------------- PROJECTS -------------------------------------------//
+
+.project {
+    margin: 0 0 (3 * $spacer);
+}
+
+.project-title {
+    margin: 0;
+
+    font-size: 3em;
+    text-decoration: underline;
+}
+
+.project-status {
+    padding: ($spacer / 2);
+
+    text-align: right;
+
+    &.active {
+        background: $green;
+    }
+
+    &.passive {
+        background: $grey;
+    }
+}
+
+.project-image {
+    width: 100%;
+}
+
+//----------------------- BLOG -----------------------------------------------//
+
+.tagcloud {
+    border-radius: ($spacer / 2);
+    padding: $spacer;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    background: $grey;
+    font-weight: bold;
+}
+
+.tagcloud-tag, .tagcloud-label {
+    margin: .15em .5em .15em 0;
+}
+
+.badge {
+    color: $blue;
+}
+
+.post {
+    margin: 0 0 (2 * $spacer);
+    border-bottom: 3px double $grey;
+    padding: 2.5% 1%;
+}
+
+.post:last-child {
+    border-bottom: 0;
+}
+
+.post-title {
+    margin: 0;
+}
+
+.post-created {
+    margin: ($spacer / 2) 0;
+    padding: $spacer ($spacer / 2);
+    width: 100%;
+
+    display: inline-block;
+    // scss-lint:disable DuplicateProperty
+
+    background: $grey;
+    background: linear-gradient(to right, $grey, $transparent);
+}
+
+.pagination {
+    display: flex;
+}
+
+.pagination-prev, .pagination-next {
+    padding: $spacer;
+    width: 100%;
+
+    color: $blue;
+    background: $grey;
+    font-size: 1.5em;
+}
+
+@media (max-width : 435px) {
+    .pagination-icon {
+        font-size: 2em;
+    }
+
+    .pagination-text {
+        display: block;
+    }
+}
+
+.pagination-prev {
+    color: $yellow;
+    background: linear-gradient(to right, $grey, $transparent);
+    text-align: left;
+}
+
+.pagination-next {
+    color: $green;
+    background: linear-gradient(to right, $transparent, $grey);
+    text-align: right;
+}
+
+//----------------------- CONTACT --------------------------------------------//
+
+.form-field {
+    margin: 0 0 $spacer;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label, input, select, textarea {
+    padding: $spacer ($spacer / 2);
+}
+
+label {
+    min-width: 100px;
+}
+
+input, select, textarea {
+    outline: 0;
+    border: 1px solid $grey;
+    width: 100%;
+    max-width: 500px;
+
+    font-family: inherit;
+    font-size: inherit;
+}
+
+input[type='submit'] {
+    width: inherit;
+    min-width: 150px;
+}
+
+@media (max-width : 740px) {
+    .label-hold {
+        display: none;
+    }
+}
+
+.submit {
+    color: $white;
+    background-color: $primary;
+}

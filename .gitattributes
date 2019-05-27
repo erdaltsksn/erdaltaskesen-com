@@ -1,0 +1,2 @@
+/docs/CHANGELOG.md merge=union
+/media/* filter=lfs diff=lfs merge=lfs -text

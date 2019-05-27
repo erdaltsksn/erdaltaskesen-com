@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1 class="page-title">{{ .Title | singularize | upper }}</h1>
+
+<div class="posts">
+    <section class="tagcloud">
+        {{ range $.Site.Taxonomies.tags.ByCount }}
+        {{ if .Term }}
+        {{ if ge .Count 1 }}
+        <a href="/blog/tag/{{ .Term }}" class="tagcloud-tag">{{ .Term }}
+            (<span class="badge">{{ .Count }}</span>)
+        </a>
+        {{ end }}
+        {{ end }}
+        {{ end}}
+    </section>
+
+    {{ partial "post-list" . }}
+</div>
+
+{{ partial "pagination" . }}
+{{ end }}

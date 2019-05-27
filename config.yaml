@@ -1,0 +1,23 @@
+baseURL: "https://www.erdaltaskesen.com/"
+title: "Erdal TAŞKESEN"
+languageCode: "en-us"
+
+permalinks:
+  page: /:title/
+  tags: /blog/tag/:title/
+
+frontmatter:
+  date:
+    - ':filename'
+    - ':default'
+
+outputFormats:
+  RSS:
+    mediatype: application/rss
+    baseName: rss
+
+params:
+  highlightLanguages:
+    - bash
+    - go
+    - python

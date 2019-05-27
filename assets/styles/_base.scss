@@ -1,0 +1,63 @@
+@import 'variables';
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+
+    font-family: $font-family-base;
+    font-size: 1.6rem;
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1rem;
+
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.75em;
+}
+
+h2 {
+    font-size: 2.25em;
+}
+
+h3 {
+    font-size: 1.75em;
+}
+
+h4 {
+    font-size: 1.25em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+h6 {
+    font-size: .75em;
+}
+
+pre, code {
+    font-family: $font-family-monospace;
+}

@@ -1,0 +1,30 @@
+<form name="contact" method="post" data-netlify="true" class="contact">
+    <div class="form-field">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" value="" required>
+    </div>
+    <div class="form-field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" value="" required>
+    </div>
+    <div class="form-field">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject" required>
+            <option value="general" selected>General</option>
+            <option value="help">Help</option>
+            <option value="other">Other</option>
+        </select>
+    </div>
+    <div class="form-field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="10"></textarea>
+    </div>
+    <div class="form-field">
+        <label class="label-hold"></label>
+        <div data-netlify-recaptcha="true"></div>
+    </div>
+    <div class="form-field">
+        <label for="submit" class="label-hold"></label>
+        <input class="submit" id="submit" name="submit" type="submit" value="Send">
+    </div>
+</form>
