@@ -1,6 +1,7 @@
 # erdaltaskesen.com
 
 [![Build Status](https://travis-ci.com/erdaltsksn/erdaltaskesen-com.svg?branch=master)](https://travis-ci.com/erdaltsksn/erdaltaskesen-com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1c8b3912-f859-4530-bd88-2b5c26e393a4/deploy-status)](https://app.netlify.com/sites/erdaltaskesen/deploys)
 
 ## About erdaltaskesen.com
 

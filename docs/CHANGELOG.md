@@ -13,7 +13,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Added
 
-- for_new_features
+- Netlify Deploy status badge
 
 ### Changed
 
