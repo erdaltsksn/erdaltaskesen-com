@@ -17,7 +17,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
-- for_changes_in_existing_functionality
+- The font-size of page title at single post page are decreased
 
 ### Removed
 
