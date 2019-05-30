@@ -7,8 +7,6 @@ dist: xenial
 matrix:
   include:
     - language: python
-      python:
-        - "nightly"
       install:
         - pip install pre-commit
       script:
