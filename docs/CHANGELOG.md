@@ -18,6 +18,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 ### Changed
 
 - The font-size of page title at single post page are decreased
+- The font-size of portfolio title are decreased
 
 ### Removed
 
