@@ -19,6 +19,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 - The font-size of page title at single post page are decreased
 - The font-size of portfolio title are decreased
+- Two Columns Project page design for desktop
 
 ### Removed
 

@@ -194,8 +194,21 @@ body {
 
 //----------------------- PROJECTS -------------------------------------------//
 
+@media (min-width : 959px) {
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 .project {
-    margin: 0 0 (3 * $spacer);
+    margin: 0 .5% (3 * $spacer);
+}
+
+@media (min-width : 959px) {
+    .project {
+        width: 49%;
+    }
 }
 
 .project-title {
