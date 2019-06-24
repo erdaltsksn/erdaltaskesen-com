@@ -1,0 +1,7 @@
+# Redirect default Netlify subdomain to primary domain
+http://erdaltaskesen.netlify.com/* https://www.erdaltaskesen.com/:splat 301!
+https://erdaltaskesen.netlify.com/* https://www.erdaltaskesen.com/:splat 301!
+
+# Redirect non-www to www
+http://erdaltaskesen.com/* https://www.erdaltaskesen.com/:splat 301!
+https://erdaltaskesen.com/* https://www.erdaltaskesen.com/:splat 301!
