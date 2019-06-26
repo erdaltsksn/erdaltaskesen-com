@@ -9,11 +9,14 @@
     </div>
     <div class="form-field">
         <label for="subject">Subject</label>
-        <select id="subject" name="subject" required>
-            <option value="general" selected>General</option>
-            <option value="help">Help</option>
-            <option value="other">Other</option>
-        </select>
+        <section class="radio-list">
+            <input type="radio" name="subject" id="subject-general" value="general" checked>
+            <label for="subject-general">General</label>
+            <input type="radio" name="subject" id="subject-help" value="help">
+            <label for="subject-help">Help</label>
+            <input type="radio" name="subject" id="subject-other" value="other">
+            <label for="subject-other">Other</label>
+        </section>
     </div>
     <div class="form-field">
         <label for="message">Message</label>

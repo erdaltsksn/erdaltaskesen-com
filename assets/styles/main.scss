@@ -4,23 +4,23 @@
 //----------------------- BASE -----------------------------------------------//
 
 .mario-blue {
-    color: $blue;
-    background: $blue;
+    color: $mario-blue;
+    background: $mario-blue;
 }
 
 .mario-green {
-    color: $green;
-    background: $green;
+    color: $mario-green;
+    background: $mario-green;
 }
 
 .mario-yellow {
-    color: $yellow;
-    background: $yellow;
+    color: $mario-yellow;
+    background: $mario-yellow;
 }
 
 .mario-red {
-    color: $red;
-    background: $red;
+    color: $mario-red;
+    background: $mario-red;
 }
 
 body {
@@ -29,155 +29,140 @@ body {
 
 .wrap {
     margin: 0 auto;
-    max-width: 960px;
-}
-
-//----------------------- HEADER ---------------------------------------------//
-
-.logo {
-    margin: 2.5% 0 0;
-    padding: ($spacer / 2);
-
-    display: block;
-}
-
-.logo-mobile {
-    display: block;
-}
-
-.logo-desktop {
-    display: none;
-}
-
-@media (min-width : 575px) {
-    .logo-mobile {
-        display: none;
-    }
-
-    .logo-desktop {
-        display: block;
-    }
-}
-
-.primary-nav-list {
-    margin: 0 auto;
-    padding: 0;
-
-    display: flex;
-    flex-direction: column;
-
-    text-align: center;
-
-    list-style-type: none;
-}
-
-@media (min-width : 470px) {
-    .primary-nav-list {
-        flex-direction: row;
-    }
-}
-
-.primary-nav-item {
-    flex: 1;
-}
-
-.primary-nav-link {
-    padding: (1.5 * $spacer) $spacer;
-
-    display: block;
-
-    color: $grey;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-.primary-nav-link:hover {
-    box-shadow: inset 0 ($spacer / -2) 0 0 $black;
-
-    text-decoration: none;
-}
-
-//----------------------- MAIN -----------------------------------------------//
-
-.main {
-    padding: $spacer 5%;
+    max-width: $l;
 
     background: $white;
 }
 
-.page-title {
-    border-bottom: ($spacer / 2) dotted $grey;
+//----------------------- HEADER ---------------------------------------------//
 
-    font-family: monospace;
-    font-size: 4em;
-}
-
-//----------------------- FOOTER ---------------------------------------------//
-
-.social {
-    padding: ($spacer / 5);
+.branding {
+    border-bottom: 1px solid $grey;
+    padding: $spacer;
 
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
-    background: $grey;
+    background: scale-color($grey, $lightness: 75);
+}
+
+.branding-logo {
+    height: 40px;
+}
+
+.branding-social {
+    font-size: 2.5em;
 }
 
 .social-link {
-    padding: 0 ($spacer / 5);
-
-    font-size: 3.5rem;
-
     >[class^='fa-'], >[class*=' fa-'] {
         background: none;
     }
 }
 
-.copyright {
+//----------------------- NAVIGATION -----------------------------------------//
+
+.primary-nav {
+    @media ($l-down) {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
+}
+
+.primary-nav-list {
     margin: 0;
+    padding: 0;
+
+    display: flex;
+
+    list-style: none;
+}
+
+.primary-nav-item {
+    padding: $spacer 1%;
+
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.primary-nav-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: $white;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.primary-nav-icon {
+    font-size: 1.5em;
+}
+
+.primary-nav-text {
+    font-size: .85em;
+}
+
+//----------------------- MAIN -----------------------------------------------//
+
+.main {
+    padding: 2.5%;
+}
+
+.page-title {
+    border-bottom: 5px dotted $grey;
+
+    font-family: monospace;
+    font-size: 4em;
+}
+
+.copyright {
     padding: $spacer;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    text-align: center;
+
+    @media ($l-down) {
+        margin: 0 0 calc(2 * #{$spacer} + 40px); // Total height of .primary-nav
+    }
 }
 
 .copyright-line {
-    padding: 0 ($spacer / 10);
+    padding: 0 .1em;
 }
 
-//----------------------- NOT FOUND ------------------------------------------//
+//----------------------- NOT FOUND & HOME -----------------------------------//
 
-.not-found {
+.not-found, .profile {
+    margin: 10% 0;
+
     text-align: center;
 }
 
 .not-found-emoji {
-    font-size: 5rem;
-}
-
-.not-found-text {
-    font-size: 2rem;
-}
-
-//----------------------- HOME -----------------------------------------------//
-
-.profile {
-    margin: 2.5% 0 0;
+    font-size: 3em;
 }
 
 .profile-image {
     margin: auto;
-    border: ($spacer / 1.25) solid $grey;
+    border: 7.5px solid $grey;
     border-radius: 50%;
-    max-width: 300px;
+    max-width: 250px;
 }
 
 .profile-info {
     margin: $spacer 0 0;
-
-    text-align: center;
 }
 
 .profile-info-name {
@@ -185,6 +170,7 @@ body {
 
     font-family: monospace;
     font-size: 4em;
+    line-height: 1;
     word-spacing: -.3em;
 }
 
@@ -194,20 +180,18 @@ body {
 
 //----------------------- PROJECTS -------------------------------------------//
 
-@media (min-width : 959px) {
-    .projects {
+.projects {
+    @media ($l-up) {
         display: flex;
         flex-wrap: wrap;
     }
 }
 
 .project {
-    margin: 0 .5% (3 * $spacer);
-}
+    margin: 0 .5% $spacer;
 
-@media (min-width : 959px) {
-    .project {
-        width: 49%;
+    @media ($l-up) {
+        width: 49%; // (100% / 2) - (2 * margin)
     }
 }
 
@@ -218,16 +202,16 @@ body {
 }
 
 .project-status {
-    padding: ($spacer / 2);
+    padding: $spacer;
 
     text-align: right;
 
     &.active {
-        background: $green;
+        background: $success;
     }
 
     &.passive {
-        background: $grey;
+        background: $warning;
     }
 }
 
@@ -238,7 +222,7 @@ body {
 //----------------------- BLOG -----------------------------------------------//
 
 .tagcloud {
-    border-radius: ($spacer / 2);
+    border-radius: $spacer;
     padding: $spacer;
 
     display: flex;
@@ -249,21 +233,21 @@ body {
 }
 
 .tagcloud-tag, .tagcloud-label {
-    margin: .15em .5em .15em 0;
+    margin: .15em .25em;
 }
 
 .badge {
-    color: $blue;
+    color: scale-color($primary, $lightness: 25);
 }
 
 .post {
-    margin: 0 0 (2 * $spacer);
+    margin: 0 0 $spacer;
     border-bottom: 3px double $grey;
-    padding: 2.5% 1%;
-}
+    padding: $spacer 1%;
 
-.post:last-child {
-    border-bottom: 0;
+    &:last-child {
+        border-bottom: 0;
+    }
 }
 
 .post-single>.page-title {
@@ -275,14 +259,12 @@ body {
 }
 
 .post-created {
-    margin: ($spacer / 2) 0;
-    padding: $spacer ($spacer / 2);
+    margin: $spacer 0;
+    padding: $spacer;
     width: 100%;
 
     display: inline-block;
-    // scss-lint:disable DuplicateProperty
 
-    background: $grey;
     background: linear-gradient(to right, $grey, $transparent);
 }
 
@@ -294,12 +276,23 @@ body {
     padding: $spacer;
     width: 100%;
 
-    color: $blue;
     background: $grey;
     font-size: 1.5em;
 }
 
-@media (max-width : 435px) {
+.pagination-prev {
+    color: $warning;
+    background: linear-gradient(to right, $grey, $transparent);
+    text-align: left;
+}
+
+.pagination-next {
+    color: $success;
+    background: linear-gradient(to right, $transparent, $grey);
+    text-align: right;
+}
+
+@media ($s-down) {
     .pagination-icon {
         font-size: 2em;
     }
@@ -309,57 +302,8 @@ body {
     }
 }
 
-.pagination-prev {
-    color: $yellow;
-    background: linear-gradient(to right, $grey, $transparent);
-    text-align: left;
-}
-
-.pagination-next {
-    color: $green;
-    background: linear-gradient(to right, $transparent, $grey);
-    text-align: right;
-}
-
 //----------------------- CONTACT --------------------------------------------//
 
-.form-field {
-    margin: 0 0 $spacer;
-
-    display: flex;
-    flex-wrap: wrap;
-}
-
-label, input, select, textarea {
-    padding: $spacer ($spacer / 2);
-}
-
-label {
-    min-width: 100px;
-}
-
-input, select, textarea {
-    outline: 0;
-    border: 1px solid $grey;
-    width: 100%;
-    max-width: 500px;
-
-    font-family: inherit;
-    font-size: inherit;
-}
-
-input[type='submit'] {
-    width: inherit;
-    min-width: 150px;
-}
-
-@media (max-width : 740px) {
-    .label-hold {
-        display: none;
-    }
-}
-
-.submit {
-    color: $white;
-    background-color: $primary;
+.contact {
+    padding: 0 2.5%;
 }

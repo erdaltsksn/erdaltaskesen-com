@@ -1,17 +1,34 @@
+//----------------------- BREAKPOINTS ----------------------------------------//
+$s: 425px;
+$m: 768px;
+$l: 1024px;
+$s-down: 'max-width : 424px';
+$m-down: 'max-width : 767px';
+$l-down: 'max-width : 1023px';
+$s-up: 'min-width : 425px';
+$m-up: 'min-width : 768px';
+$l-up: 'min-width : 1024px';
+
 //----------------------- LAYOUT ---------------------------------------------//
-$spacer: 1rem;
+$spacer: calc(1% + 2.5px);
 
 //----------------------- COLORS ---------------------------------------------//
 $transparent: rgba(255, 255, 255, 0);
 $black: #0e140e;
 $white: #fff;
 $grey: #eee;
-// Theme colors
+
 $primary: #3b8bba;
-$blue: #1ba0db;
-$green: #40a647;
-$yellow: #eec617;
-$red: #e02926;
+
+$success: #1cb841;
+$error: #ca3c3c;
+$warning: #df7514;
+
+// Mario colors
+$mario-blue: #1ba0db;
+$mario-green: #40a647;
+$mario-yellow: #eec617;
+$mario-red: #e02926;
 
 //----------------------- FONTS ----------------------------------------------//
 $font-family-base: // Safari for OS X and iOS (San Francisco)
