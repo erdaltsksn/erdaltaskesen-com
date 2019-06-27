@@ -59,6 +59,10 @@ body {
     >[class^='fa-'], >[class*=' fa-'] {
         background: none;
     }
+
+    &:hover {
+        text-decoration: none;
+    }
 }
 
 //----------------------- NAVIGATION -----------------------------------------//

@@ -9,7 +9,7 @@ project adheres to [Semantic Versioning](https://semver.org/).
 
 ### Fixed
 
-- for_any_bug_fixes
+- Remove the underline of social icons on hover
 
 ### Added
 
