@@ -42,7 +42,7 @@ chmod 600 ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
 Finally, you may need to adjust the container directory permissions as well:
 
 ```sh
-sudo chmod 755 ~/.ssh
+chmod 755 ~/.ssh
 ```
 
 That’s all. Now you can use your SSH keys without any errors or warnings.
