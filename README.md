@@ -1,13 +1,8 @@
 # erdaltaskesen.com
 
-[![Build Status](https://travis-ci.com/erdaltsksn/erdaltaskesen-com.svg?branch=master)](https://travis-ci.com/erdaltsksn/erdaltaskesen-com)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1c8b3912-f859-4530-bd88-2b5c26e393a4/deploy-status)](https://app.netlify.com/sites/erdaltaskesen/deploys)
 
-## About erdaltaskesen.com
-
 Erdal's Personal website.
-
-![Screenshot](/media/screenshot.png)
 
 ## Features
 
@@ -31,20 +26,10 @@ npm run build-prod
 
 Just copy the content of `public` folder to the root of your webserver.
 
-## History
-
-See [CHANGELOG](docs/CHANGELOG.md) to learn how this project evolved during the
-time.
-
 ## Contributing
 
 If you want to contribute to this project and make it better, your help is very
 welcome. See [CONTRIBUTING](docs/CONTRIBUTING.md) for more information.
-
-## Code of Conduct
-
-This project adheres to [Code of Conduct](docs/CODE_OF_CONDUCT.md). By
-participating, you are expected to uphold this code.
 
 ## Disclaimer
 
@@ -53,9 +38,3 @@ punitive, incidental, indirect or consequential damages of any kind, or any
 damages whatsoever, including, without limitation, those resulting from loss of
 use, data or profits, and on any theory of liability, arising out of or in
 connection with the use of this software.
-
-## Feedback
-
-Suggestions / Improvements [WELCOME]!
-
-[WELCOME]: https://github.com/erdaltsksn/erdaltaskesen-com/issues

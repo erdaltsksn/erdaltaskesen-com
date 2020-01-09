@@ -16,9 +16,7 @@ describe_expected_behavior_here
 
 ## Steps to reproduce the bug
 
-1. describe
-2. the_steps
-3. here
+1. describe_the_steps_here
 
 ## Additional Context
 
