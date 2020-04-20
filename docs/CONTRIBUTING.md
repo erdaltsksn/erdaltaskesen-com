@@ -21,9 +21,9 @@ request!
 
 ### Prerequisites
 
-- [Git](https://git-scm.com/downloads)
-- [Hugo](https://gohugo.io/getting-started/installing/)
-- [npmjs](https://www.npmjs.com/get-npm)
+- [Git](https://git-scm.com/)
+- [Hugo](https://gohugo.io/)
+- [npmjs](https://www.npmjs.com/)
 
 ## Commit Message Guidelines
 
