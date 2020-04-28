@@ -18,15 +18,15 @@ Unix programs have always been expected to follow the concept of DOTADIW:
 <!--more-->
 
 Some people are obsessive about the LOC (Lines of Code). You shouldn't care about
-it. The key in the modular development. All you need to know is how to use the
-lego blocks to build a castle. But even Modularity is a powerful concept, but
-like anything else it's not magic stick.
+it. it's not the key in the modular development. All you need to know is how to
+use the lego blocks to build a castle. But even Modularity is a powerful concept,
+but like anything else, it's not a magic stick.
 
 ## One programmer broke the internet
 
 There was a situation in 2016. A man named [Azer Koçulu](https://kodfabrik.com)
 broke the internet by removing just a micro-package named `left-pad` cause many
-project using it as a dependency. The impat of these was large as it was being
+projects using it as a dependency. The impact of these was large as it was being
 used a large number of very popular project like (Babel, Atom, React, and etc.)
 
 **SOURCES:**
