@@ -4,6 +4,10 @@ https://erdaltaskesen.netlify.app/* https://www.erdaltaskesen.com/:splat 301!
 http://erdaltaskesen.netlify.com/* https://www.erdaltaskesen.com/:splat 301!
 https://erdaltaskesen.netlify.com/* https://www.erdaltaskesen.com/:splat 301!
 
+# Redirect branch Netlify subdomains to primary domain
+http://master--erdaltaskesen.netlify.app/* https://www.erdaltaskesen.com/:splat 301!
+https://master--erdaltaskesen.netlify.app/* https://www.erdaltaskesen.com/:splat 301!
+
 # Redirect non-www to www
 http://erdaltaskesen.com/* https://www.erdaltaskesen.com/:splat 301!
 https://erdaltaskesen.com/* https://www.erdaltaskesen.com/:splat 301!
