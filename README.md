@@ -4,6 +4,8 @@
 
 Erdal's Personal website.
 
+![Screenshot](/assets/screenshot.png)
+
 ## Features
 
 - Hugo based

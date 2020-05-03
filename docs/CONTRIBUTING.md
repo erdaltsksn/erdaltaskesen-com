@@ -97,7 +97,7 @@ When you can't find a previous bug, open an issue keeping in mind the following
 considerations:
 
 - Try to reproduce the bug using the code found on the master branch
-- Copy and paste the full error message, including the backtrace
+- Copy and paste the full error message, including the `backtrace`
 - Be as detailed as possible and include any additional information
 
 ## Feature requests
