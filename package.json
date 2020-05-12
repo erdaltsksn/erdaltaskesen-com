@@ -28,8 +28,7 @@
     "sass": "node-sass -o ./static/styles/ ./assets/styles/",
     "autoprefixer": "npx postcss ./static/styles/*.css --use autoprefixer -d ./static/styles/",
     "cleancss": "foreach -g './static/styles/*.css' -x 'cleancss #{path} -o #{path}'",
-    "buildcss": "npm run csscomb; npm run sass; npm run autoprefixer; npm run cleancss",
-    "build": "npm run buildcss",
+    "build": "npm run csscomb; npm run sass; npm run autoprefixer; npm run cleancss",
     "build-dev": "npm run build; hugo server",
     "build-prod": "npm run build; hugo"
   }
