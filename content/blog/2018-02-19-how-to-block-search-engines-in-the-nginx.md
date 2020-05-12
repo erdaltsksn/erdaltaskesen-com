@@ -12,9 +12,9 @@ If you have three layered development structure (local dev, remote staging,
 remote production) like me, you want to search engines index your staging server.
 It is easy to prevent search engines from indexing your nginx web server.
 
-```sh
+{{< highlight bash >}}
 add_header  X-Robots-Tag "noindex, nofollow, nosnippet, noarchive";
-```
+{{< /highlight >}}
 
 <!--more-->
 

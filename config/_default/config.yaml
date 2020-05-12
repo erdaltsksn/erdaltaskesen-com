@@ -15,9 +15,3 @@ outputFormats:
   RSS:
     mediatype: application/rss
     baseName: rss
-
-params:
-  highlightLanguages:
-    - bash
-    - go
-    - python

@@ -16,7 +16,7 @@ want to show how easy can be to create a REST API with Flask.
 This tutorial aims to build a small and simple app. The entire app fits in a
 single file. Let's see some codes.
 
-```python
+{{< highlight python >}}
 from flask import Flask, jsonify
 
 app = Flask(__name__)
@@ -28,17 +28,17 @@ def hello():
 @app.route("/api")
 def hello_api():
     return jsonify(id=1, title='Hello World!')
-```
+{{< /highlight >}}
 
 Let's test it with curl. We will only send GET request.
 
-```sh
+{{< highlight bash >}}
 $ curl --request GET http://127.0.0.1:5000/api
 {
   "id": 1,
   "title": "Hello World!"
 }
-```
+{{< /highlight >}}
 
 This is the simplest possible API example. If you need a full-featured REST API
 solution, you should check the REST extensions.

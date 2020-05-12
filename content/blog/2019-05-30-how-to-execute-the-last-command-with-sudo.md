@@ -9,9 +9,9 @@ tags:
 If you forgot to add `sudo` in your last command, you don't need to type it
 completely. To execute ant last executed command by as super user:
 
-```sh
+{{< highlight bash >}}
 sudo !!
-```
+{{< /highlight >}}
 
 <!--more-->
 

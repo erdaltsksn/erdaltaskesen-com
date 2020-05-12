@@ -18,7 +18,7 @@ permissions on the private key file.
 
 **Complete error output:**
 
-```sh
+{{< highlight bash >}}
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @     WARNING: UNPROTECTED PRIVATE KEY FILE!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -31,19 +31,19 @@ fatal: Could not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
-```
+{{< /highlight >}}
 
 To fix this, you need to reset the permission to default.
 
-```sh
+{{< highlight bash >}}
 chmod 600 ~/.ssh/id_rsa ~/.ssh/id_rsa.pub
-```
+{{< /highlight >}}
 
 Finally, you may need to adjust the container directory permissions as well:
 
-```sh
+{{< highlight bash >}}
 chmod 755 ~/.ssh
-```
+{{< /highlight >}}
 
 That’s all. Now you can use your SSH keys without any errors or warnings.
 

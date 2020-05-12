@@ -12,17 +12,17 @@ Sometimes you want to get rid of from all python packages. There is a quick and
 easy way to do this. The command below will also remove the packages installed
 via VCS.
 
-```sh
+{{< highlight bash >}}
 pip freeze | grep -v "^-e" | xargs pip uninstall -y
-```
+{{< /highlight >}}
 
 <!--more-->
 
 You may also use the command below. The command will also remake virtualenv,
 including copying python executable, install base libraries and etc.
 
-```sh
+{{< highlight bash >}}
 virtualenv --clear __Your_Env_Name__
-```
+{{< /highlight >}}
 
 You should always backup pip list before clearing all packages.

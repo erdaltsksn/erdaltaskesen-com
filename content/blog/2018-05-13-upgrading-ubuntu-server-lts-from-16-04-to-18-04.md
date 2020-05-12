@@ -28,11 +28,11 @@ filesystem will be more consistent).
 Before beginning the release upgrade, it's safest to update to the latest
 versions of all packages for the current release.
 
-```sh
+{{< highlight bash >}}
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
-```
+{{< /highlight >}}
 
 ## Step 3 – Upgrading with Ubuntu's do-release-upgrade Tool
 
@@ -43,9 +43,9 @@ easier.
 and a range of other tasks, and is the officially recommended upgrade path for
 server upgrades which must be performed over a remote connection.
 
-```sh
+{{< highlight bash >}}
 sudo do-release-upgrade
-```
+{{< /highlight >}}
 
 If there is no new release, you can try to add -d option to upgrade to the
 development release. If everything goes well, you should reboot and use it

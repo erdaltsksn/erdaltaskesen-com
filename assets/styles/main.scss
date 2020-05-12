@@ -34,6 +34,15 @@ body {
     background: $white;
 }
 
+.highlight {
+    >pre {
+        padding: .5em;
+        overflow: scroll;
+
+        background: #002b36 !important;
+    }
+}
+
 //----------------------- HEADER ---------------------------------------------//
 
 .branding {

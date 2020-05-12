@@ -11,9 +11,9 @@ but it will ammend current date to that tag which can screw your repository by
 making out of chronological order. Don't worry, You may fix this using the code
 below.
 
-```sh
+{{< highlight bash >}}
 git tag -l | while read -r tag ; do COMMIT_HASH=$(git rev-list -1 $tag) && GIT_COMMITTER_DATE="$(git show $COMMIT_HASH --format=%aD | head -1)" git tag -a -f $tag -m"$(git show $COMMIT_HASH --format=%s | head -1)" $COMMIT_HASH ; done && git push --tags --force
-```
+{{< /highlight >}}
 
 <!--more-->
 
@@ -22,7 +22,7 @@ add messages to tag, they will be replaced by tag's commit subject.
 
 Let's learn what this code does by breaking it down.
 
-```sh
+{{< highlight bash >}}
 # Loop over tags
 git tag -l | while read -r tag
 do
@@ -44,7 +44,7 @@ do
 done
 # Force push tags and overwrite ones on the server with the same name
 git push --tags --force
-```
+{{< /highlight >}}
 
 **SOURCES:**
 

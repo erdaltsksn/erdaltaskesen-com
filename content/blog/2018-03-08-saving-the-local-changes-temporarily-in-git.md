@@ -13,18 +13,18 @@ urgent things and go back it. For this, you can use `git stash` command.
 
 <!--more-->
 
-```sh
+{{< highlight bash >}}
 $ git stash
 Saved working directory and index state WIP on master:
     fe100c4 Add modified one
-```
+{{< /highlight >}}
 
 Now your files saved on "git-clipboard" and you can work on your urgent bug.
 After your urgent bug is solved, you may get your files from the clipboard using
 the command below.
 
-```sh
+{{< highlight bash >}}
 git stash pop
-```
+{{< /highlight >}}
 
 The `pop` will also do clean-up on the Stash.

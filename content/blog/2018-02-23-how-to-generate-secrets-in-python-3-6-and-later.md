@@ -11,10 +11,10 @@ suitable for secret keys. There is a new module named secrets in version 3.6 and
 later. You can use the code below to generate cryptographically strong random
 values.
 
-```python
+{{< highlight python >}}
 import secrets
 secrets.token_hex()
-```
+{{< /highlight >}}
 
 <!--more-->
 

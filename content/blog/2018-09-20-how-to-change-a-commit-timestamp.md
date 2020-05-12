@@ -10,9 +10,9 @@ You may need to change the DateTime of a commit in some situations. For example,
 some countries use daylight saving time period and because of it, some of the
 commits can have the wrong timestamp.
 
-```sh
+{{< highlight bash >}}
 git commit --amend --date "Thu Feb 15 22:37:31 2018 +0300"
-```
+{{< /highlight >}}
 
 <!--more-->
 

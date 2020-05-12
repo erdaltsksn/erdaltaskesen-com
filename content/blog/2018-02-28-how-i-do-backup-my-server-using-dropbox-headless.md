@@ -25,10 +25,10 @@ About my backup strategy, you may find the steps below:
 
 ## 1. Install Dropbox Headless
 
-```sh
+{{< highlight bash >}}
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
 ~/.dropbox-dist/dropboxd
-```
+{{< /highlight >}}
 
 The second command will ask you to copy and paste a link into a browser to link
 your device to your account. After you activate your device, you can stop and
@@ -38,16 +38,16 @@ Dropbox by using CTRL + C key combination.
 
 Edit the cron job using the command below.
 
-```sh
+{{< highlight bash >}}
 crontab -e
-```
+{{< /highlight >}}
 
 Add the line below:
 
-```sh
+{{< highlight bash >}}
 # Restart headless dropbox at start
 @reboot ~/.dropbox-dist/dropboxd
-```
+{{< /highlight >}}
 
 This cron job will start dropbox daemon every time you restart your server. Note
 that this job must be before all the backup jobs. After this, you have to
@@ -57,17 +57,17 @@ restart your web server to start Dropbox.
 
 Edit the cron job using the command below.
 
-```sh
+{{< highlight bash >}}
 crontab -e
-```
+{{< /highlight >}}
 
 Add the line below:
 
-```sh
+{{< highlight bash >}}
 # Backup for your_app_name
 
 0 */12 * * * zip -rj /home/your_user_name/Dropbox/BACKUPS/your_app_name/$(date '+\%Y\%m\%d\%H\%M\%S')_content.zip /home/your_username/your_project_content/folder/
 0 */12 * * * mysqldump -u 'your_db_username' -p'your_db_password' your_db_name > /home/your_user_name/Dropbox/BACKUPS/your_app_name/$(date '+\%Y\%m\%d\%H\%M\%S')_db.sql
-```
+{{< /highlight >}}
 
 You have to change the lines, such as `your_x_variable` according to you.

@@ -13,9 +13,9 @@ Sometimes you want to add only one specific part of some files.
 You can use one of the following commands. This commands with their options will
 will break down your files into smaller portions named **hunks**.
 
-```sh
+{{< highlight bash >}}
 git add -p <filename>
-```
+{{< /highlight >}}
 
 <!--more-->
 

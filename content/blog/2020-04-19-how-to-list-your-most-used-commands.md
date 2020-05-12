@@ -9,9 +9,9 @@ tags:
 If you are a developer, you're mostly working using the command line. You may
 even wanna find out the most used commands.
 
-```sh
+{{< highlight bash >}}
 fc -l 1 | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a; }' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10
-```
+{{< /highlight >}}
 
 <!--more-->
 

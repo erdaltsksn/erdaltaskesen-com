@@ -32,8 +32,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
         integrity="sha256-BtbhCIbtfeVWGsqxk1vOHEYXS6qcvQvLMZqjtpWUEx8=" crossorigin="anonymous" />
     <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/solarized-dark.min.css" />
     <!-- RSS Links -->
     <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="/rss.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
@@ -100,13 +98,6 @@
         <span class="copyright-line">All Rights Reserved.</span>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-    {{ range .Site.Params.highlightLanguages }}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/languages/{{ . }}.min.js"></script>
-    {{ end }}
-    <script>
-        hljs.initHighlightingOnLoad();
-    </script>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function (m, e, t, r, i, k, a) {
