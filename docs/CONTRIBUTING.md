@@ -8,13 +8,17 @@ project. Thank you for helping out and remember, no contribution is too small.
 
 ## Step by step contribution guide
 
-1. [**Install**](#prerequisites) prerequisites
-2. **Fork** and **Clone** to your own machine
-3. **Start working** on your fix, feature and etc on **its own branch**.
-4. **Commit** changes to its own branch according to
-   [**Commit Message Guidelines**](#commit-message-guidelines)
-5. **Push** your work back to your fork
-6. Open a **Pull Request** so that we can review your changes
+01. **Install** the [prerequisites](#prerequisites)
+02. **Fork** the repository and **Clone** the fork to your own machine
+03. **Open** an issue before working on your changes
+04. **Create** a git branch and **Start working** on your fix, feature and etc
+    on **its own branch**
+05. **Create** and **Run** the **tests** (if there are any)
+06. **Commit** your changes according to [**Commit Message Guidelines**](#commit-message-guidelines)
+07. **Push** the changes to your fork and **Create** a Pull Request for review
+08. **Communicate** with the maintainer about the revisions
+09. **Be responsive** if someone request changes for your contributions
+10. Your contribution gets accepted. 🎉🎉🎉
 
 **NOTE:** Be sure to get the latest from "**upstream**" before making a pull
 request!
@@ -70,12 +74,7 @@ The following is the list of supported scopes:
 
 - **(*)** Multiple scopes or Unknown.
 - **(devops)** e.g. git, travis, pre-commit, netlify, heroku, npm, gulp and etc.
-- **(readme)** e.g. readme, getting started, changelog, code of conduct, license
-  and etc.
-- **(theme)** e.g. templates, styles, ui/ux developments and etc.
-- **(page)** e.g. simple pages, page features, and etc.
-- **(project)** e.g. projects, project features, and etc.
-- **(blog)** e.g. posts, blog features, and etc.
+- **(readme)** e.g. readme, changelog, code of conduct, license and etc.
 
 ### Revert and Merge
 
