@@ -75,6 +75,10 @@ The following is the list of supported scopes:
 - **(*)** Multiple scopes or Unknown.
 - **(devops)** e.g. git, travis, pre-commit, netlify, heroku, npm, gulp and etc.
 - **(readme)** e.g. readme, changelog, code of conduct, license and etc.
+- **(theme)** e.g. templates, styles, ui/ux developments and etc.
+- **(page)** e.g. simple pages, page features, and etc.
+- **(project)** e.g. projects, project features, and etc.
+- **(blog)** e.g. posts, blog features, and etc.
 
 ### Revert and Merge
 
