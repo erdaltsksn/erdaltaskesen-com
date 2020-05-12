@@ -9,10 +9,10 @@ html {
 }
 
 html, body {
-    height: 100% !important;
     overflow: auto !important;
-
     -webkit-overflow-scrolling: touch !important;
+
+    height: 100% !important;
 }
 
 body {
@@ -23,8 +23,9 @@ body {
 }
 
 a {
-    color: $primary;
     text-decoration: none;
+
+    color: $primary;
 }
 
 a:hover {
@@ -68,16 +69,16 @@ pre, code {
 }
 
 .form-field {
-    margin: 0 0 $spacer;
-
     display: flex;
     flex-direction: column;
+
+    margin: 0 0 $spacer;
 }
 
 .radio-list {
-    padding: $spacer 0;
-
     flex-direction: row;
+
+    padding: $spacer 0;
 
     >input[type='radio'] {
         display: none;
@@ -99,16 +100,17 @@ input:focus, textarea:focus {
 }
 
 input, textarea, input[type='radio']+label {
-    border: 1px solid $grey;
     padding: $spacer;
+
+    border: 1px solid $grey;
 
     font-size: inherit;
 }
 
 input[type='radio']+label {
-    margin: .1em 0;
-
     display: inline-block;
+
+    margin: .1em 0;
 }
 
 input[type='radio']:checked+label, input[type='submit'] {

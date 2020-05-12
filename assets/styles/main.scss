@@ -28,16 +28,17 @@ body {
 }
 
 .wrap {
-    margin: 0 auto;
     max-width: $l;
+    margin: 0 auto;
 
     background: $white;
 }
 
 .highlight {
     >pre {
-        padding: .5em;
         overflow: scroll;
+
+        padding: .5em;
 
         background: #002b36 !important;
     }
@@ -46,13 +47,13 @@ body {
 //----------------------- HEADER ---------------------------------------------//
 
 .branding {
-    border-bottom: 1px solid $grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
     padding: $spacer;
 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+    border-bottom: 1px solid $grey;
     background: scale-color($grey, $lightness: 75);
 }
 
@@ -79,35 +80,35 @@ body {
 .primary-nav {
     @media ($l-down) {
         position: fixed;
+        z-index: 1;
         right: 0;
         bottom: 0;
         left: 0;
-        z-index: 1;
     }
 }
 
 .primary-nav-list {
+    display: flex;
+
     margin: 0;
     padding: 0;
-
-    display: flex;
 
     list-style: none;
 }
 
 .primary-nav-item {
-    padding: $spacer 1%;
-
+    flex-basis: 0;
     flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: 0;
+
+    padding: $spacer 1%;
 }
 
 .primary-nav-link {
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
 
     color: $white;
 
@@ -138,11 +139,11 @@ body {
 }
 
 .copyright {
-    padding: $spacer;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    padding: $spacer;
 
     text-align: center;
 
@@ -168,10 +169,11 @@ body {
 }
 
 .profile-image {
+    max-width: 250px;
     margin: auto;
+
     border: 7.5px solid $grey;
     border-radius: 50%;
-    max-width: 250px;
 }
 
 .profile-info {
@@ -181,10 +183,11 @@ body {
 .profile-info-name {
     margin: 0;
 
+    word-spacing: -.3em;
+
     font-family: monospace;
     font-size: 4em;
     line-height: 1;
-    word-spacing: -.3em;
 }
 
 .profile-info-title {
@@ -233,13 +236,14 @@ body {
 //----------------------- BLOG -----------------------------------------------//
 
 .tagcloud {
-    border-radius: $spacer;
-    padding: $spacer;
-
     display: flex;
     flex-wrap: wrap;
 
+    padding: $spacer;
+
+    border-radius: $spacer;
     background: $grey;
+
     font-weight: bold;
 }
 
@@ -253,8 +257,9 @@ body {
 
 .post {
     margin: 0 0 $spacer;
-    border-bottom: 3px double $grey;
     padding: $spacer 1%;
+
+    border-bottom: 3px double $grey;
 
     &:last-child {
         border-bottom: 0;
@@ -270,11 +275,11 @@ body {
 }
 
 .post-created {
+    display: inline-block;
+
+    width: 100%;
     margin: $spacer 0;
     padding: $spacer;
-    width: 100%;
-
-    display: inline-block;
 
     background: linear-gradient(to right, $grey, $transparent);
 }
@@ -284,23 +289,26 @@ body {
 }
 
 .pagination-prev, .pagination-next {
-    padding: $spacer;
     width: 100%;
+    padding: $spacer;
 
     background: $grey;
+
     font-size: 1.5em;
 }
 
 .pagination-prev {
+    text-align: left;
+
     color: $warning;
     background: linear-gradient(to right, $grey, $transparent);
-    text-align: left;
 }
 
 .pagination-next {
+    text-align: right;
+
     color: $success;
     background: linear-gradient(to right, $transparent, $grey);
-    text-align: right;
 }
 
 @media ($s-down) {
