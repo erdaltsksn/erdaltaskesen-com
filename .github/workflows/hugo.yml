@@ -12,20 +12,20 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
+        os: [ubuntu-latest, macOS-latest, windows-latest]
         node-version: [14.x]
 
     steps:
-    - name: Check out code into `$GITHUB_WORKSPACE` directory
+    - name: Check out code into $GITHUB_WORKSPACE directory
       uses: actions/checkout@v2
 
-    - name: Setup Hugo
+    - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: '0.70.0'
         extended: true
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Set up Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
