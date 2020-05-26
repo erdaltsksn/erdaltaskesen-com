@@ -2,6 +2,7 @@
 
 ![Hugo](https://github.com/erdaltsksn/erdaltaskesen-com/workflows/Hugo/badge.svg)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/1c8b3912-f859-4530-bd88-2b5c26e393a4/deploy-status)](https://app.netlify.com/sites/erdaltaskesen/deploys)
+[![License](https://img.shields.io/badge/license-Proprietary-1ba0db)](LICENSE)
 
 The source code of my personal website/blog.
 
