@@ -22,7 +22,7 @@ you prepare your books for Kindle.
 ## Step by step Instructions
 
 1. Download the book in any format you want. If you have a chance to download in
-  `.mobi` format, prefer it. Because amazon' e-book format, AZW, is based on 
+  `.mobi` format, prefer it. Because amazon' e-book format, AZW, is based on
   `Mobipocket`format.
 2. Add the book to Calibre app using the `Add books` button
 3. Click `Convert book` and convert it to AZW3 by choosing `Output format: AZW3`
