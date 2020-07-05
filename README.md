@@ -8,6 +8,11 @@ The source code of my personal website/blog.
 
 ![Screenshot](/assets/screenshot.png)
 
+## Requirements
+
+- [Hugo](https://gohugo.io/)
+- [npmjs](https://www.npmjs.com/)
+
 ## Features
 
 - Hugo based static website
@@ -47,7 +52,7 @@ npm run build-prod
 
 That's it, now your site gets deployed automatically on `git push`.
 
-## Updating
+## Updating / Upgrading
 
 Run the following command to update npm packages and regenerate the static site.
 
@@ -59,7 +64,7 @@ npm run build-prod
 See [Go Hugo Docs](https://gohugo.io/getting-started/installing/#upgrade-hugo)
 for upgrading Hugo.
 
-### Usage
+## Usage
 
 ### Serving
 
@@ -100,6 +105,10 @@ npm run [command]
 - `"build":` Combination of the four commands above.
 - `"build-dev":` Build the site and run a webserver.
 - `"build-prod":` Build the static website.
+
+## Getting Help
+
+See official [Hugo Docs](https://gohugo.io/documentation/) for more information.
 
 ## Contributing
 
