@@ -8,3 +8,8 @@ updates:
     schedule:
       interval: "daily"
     labels: [ ] # No Label
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    labels: [ ]
