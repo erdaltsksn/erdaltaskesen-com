@@ -32,6 +32,4 @@ jobs:
 
     - name: Build Hugo site
       run: |
-        npm install
-        npm run build
-        hugo
+        make build
