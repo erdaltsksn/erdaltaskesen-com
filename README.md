@@ -34,12 +34,21 @@ npm run build-dev
 
 You can visit the website at [http://localhost:1313/](http://localhost:1313/)
 
+### Via Docker
+
+```sh
+git clone https://github.com/erdaltsksn/erdaltaskesen-com.git
+cd erdaltaskesen-com
+docker-compose up
+```
+
 ## Installation
 
 Run the following command to generate static website. The static website output
 will be inside `public` folder.
 
 ```sh
+npm install
 npm run build-prod
 ```
 

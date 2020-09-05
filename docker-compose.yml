@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  hugo:
+    build:
+      context: .
+    volumes:
+      - .:/app
+    ports:
+      - 1313:1313
