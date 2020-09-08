@@ -7,7 +7,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 
 # Install Prerequisites
-RUN apt-get install -y nodejs hugo
+RUN apt-get install -y nodejs npm hugo
 
 WORKDIR /app
 
