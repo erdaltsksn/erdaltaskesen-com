@@ -1,5 +1,8 @@
 FROM ubuntu:latest
 
+# Skip the interactive mode
+ARG DEBIAN_FRONTEND=noninteractive
+
 # Update repository cache
 RUN apt-get update
 
