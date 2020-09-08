@@ -12,7 +12,7 @@ install: ## Install Node modules
 run: ## Build and run Hugo's own webserver
 	npm install
 	npm run build
-	hugo server
+	hugo server --bind=0.0.0.0
 
 .PHONY: build
 build: ## Build Hugo and get static output
