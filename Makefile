@@ -8,14 +8,17 @@ help: ## Show this help
 init: ## Install Node modules
 	npm install
 
-.PHONY: run
-run: ## Build and run Hugo's own webserver
+.PHONY: fmt
+fmt: ## Run csscomb, sass, autoprefixer, cleancss and more
 	make init
 	npm run build
+
+.PHONY: run
+run: ## Build and run Hugo's own webserver
+	make fmt
 	hugo server --bind=0.0.0.0
 
 .PHONY: build
 build: ## Build Hugo and get static output
-	make init
-	npm run build
+	make fmt
 	hugo
