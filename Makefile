@@ -22,3 +22,11 @@ run: ## Build and run Hugo's own webserver
 build: ## Build Hugo and get static output
 	make fmt
 	hugo
+
+.PHONY: clean
+clean: ## Clean all generated files
+	rm -rf ./node_modules/
+	rm -rf ./resources/_gen/
+	rm -rf ./static/styles/
+	rm -rf ./package-lock.json
+	find ./public/ ! -name "public" ! -name "_redirects" | xargs rm -rf
