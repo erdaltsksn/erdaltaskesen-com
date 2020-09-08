@@ -145,3 +145,5 @@ dist
 ################################################################################
 # Generated css files by `node-sass`
 static/styles/
+# Lock files for npm
+package-lock.json
