@@ -14,7 +14,7 @@ fmt: ## Run csscomb, sass, autoprefixer, cleancss and more
 	npm run build
 
 .PHONY: run
-run: ## Build and run Hugo's own webserver
+run: ## Run Hugo's own webserver
 	make fmt
 	hugo server --bind=0.0.0.0
 
