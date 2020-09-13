@@ -23,6 +23,10 @@ build: ## Build Hugo and get static output
 	make fmt
 	hugo
 
+.PHONY: post
+post: ## Create a new blog post. USAGE: make blog title="this-is-awesome"
+	@hugo new blog/$$(date +%Y-%m-%d)-$(title).md
+
 .PHONY: clean
 clean: ## Clean all generated files
 	rm -rf ./node_modules/
