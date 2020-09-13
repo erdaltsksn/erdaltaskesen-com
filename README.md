@@ -29,7 +29,8 @@ The source code of my personal website/blog.
 git clone https://github.com/erdaltsksn/erdaltaskesen-com.git
 cd erdaltaskesen-com
 npm install
-npm run build-dev
+npm run build
+hugo server
 ```
 
 You can visit the website at [http://localhost:1313/](http://localhost:1313/)
@@ -49,13 +50,14 @@ will be inside `public` folder.
 
 ```sh
 npm install
-npm run build-prod
+npm run build
+hugo
 ```
 
 ### Deployment and hosting with Netlify
 
 1. Create a new site in Netlify and import your repository.
-2. Set the build command to: `npm run build-prod`
+2. Set the build command to: `npm run build & hugo`
 3. Set the publish directory to: `public`
 4. Make sure to set `Build Image` to `Ubuntu Xenial 16.04` or above.
 
@@ -67,7 +69,8 @@ Run the following command to update npm packages and regenerate the static site.
 
 ```sh
 npm update
-npm run build-prod
+npm run build
+hugo
 ```
 
 See [Go Hugo Docs](https://gohugo.io/getting-started/installing/#upgrade-hugo)
@@ -81,7 +84,7 @@ Just copy the content of `public` folder to the root of your webserver.
 
 ### Deploying
 
-- **Build command:** `npm run build-prod`
+- **Build command:** `npm run build & hugo`
 - **Publish directory:** `public`
 
 ### Creating new contents
@@ -112,8 +115,6 @@ npm run [command]
 - `"autoprefixer":` Add vendor prefixes to CSS rules using `Can I Use`.
 - `"cleancss":` Optimize and minimize CSS.
 - `"build":` Combination of the four commands above.
-- `"build-dev":` Build the site and run a webserver.
-- `"build-prod":` Build the static website.
 
 ## Getting Help
 
