@@ -4,28 +4,30 @@
 help: ## Show this help
 	@egrep -h '\s##\s' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
+DOCKER_CMD := @docker-compose run --service-ports hugo
+
 .PHONY: init
 init: ## Install Node modules
-	npm install
+	$(DOCKER_CMD) npm install
 
 .PHONY: fmt
 fmt: ## Run csscomb, sass, autoprefixer, cleancss and more
 	make init
-	npm run build
+	$(DOCKER_CMD) npm run build
 
 .PHONY: run
 run: ## Run Hugo's own webserver
 	make fmt
-	hugo server --bind=0.0.0.0
+	$(DOCKER_CMD) hugo server --bind=0.0.0.0
 
 .PHONY: build
 build: ## Build Hugo and get static output
 	make fmt
-	hugo
+	$(DOCKER_CMD) hugo
 
 .PHONY: post
 post: ## Create a new blog post. USAGE: make blog title="this-is-awesome"
-	@hugo new blog/$$(date +%Y-%m-%d)-$(title).md
+	$(DOCKER_CMD) hugo new blog/$$(date +%Y-%m-%d)-$(title).md
 
 .PHONY: clean
 clean: ## Clean all generated files

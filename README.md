@@ -105,9 +105,30 @@ make post title="this-is-awesome-with-makefile"
 hugo new projects/project-name.md
 ```
 
+## Getting Help
+
+See official [Hugo Docs](https://gohugo.io/documentation/) to getting help about
+**Hugo**.
+
+### Make Commands
+
+The followings are the `make` commands that are available.
+
+```sh
+make [command]
+```
+
+- `"help":` Show this help
+- `"init":` Install Node modules
+- `"fmt":` Run csscomb, sass, autoprefixer, cleancss and more
+- `"run":` Run Hugo's own webserver
+- `"build":` Build Hugo and get static output
+- `"post":` Create a new blog post. USAGE: make blog title="this-is-awesome"
+- `"clean":` Clean all generated files
+
 ### NPM Commands
 
-The followings are the commands that are available.
+The followings are the `npm` commands that are available.
 
 ```sh
 npm run [command]
@@ -118,10 +139,6 @@ npm run [command]
 - `"autoprefixer":` Add vendor prefixes to CSS rules using `Can I Use`.
 - `"cleancss":` Optimize and minimize CSS.
 - `"build":` Combination of the four commands above.
-
-## Getting Help
-
-See official [Hugo Docs](https://gohugo.io/documentation/) for more information.
 
 ## Contributing
 
