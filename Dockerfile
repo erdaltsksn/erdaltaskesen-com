@@ -10,7 +10,3 @@ RUN apt-get update
 RUN apt-get install -y nodejs npm hugo
 
 WORKDIR /app
-
-EXPOSE 1313
-
-CMD ["make", "run"]
