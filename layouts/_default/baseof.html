@@ -32,7 +32,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="/styles/main.css">
+    {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true ) }}
+    {{ $style := resources.Get "styles/main.scss" | resources.ToCSS $options }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
     <!-- RSS Links -->
     <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="/rss.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />

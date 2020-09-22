@@ -27,7 +27,6 @@ request!
 
 - [Git](https://git-scm.com/)
 - [Hugo](https://gohugo.io/)
-- [npmjs](https://www.npmjs.com/)
 
 ## Commit Message Guidelines
 

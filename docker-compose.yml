@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 services:
   hugo:
@@ -8,10 +8,4 @@ services:
       - .:/app
     ports:
       - 1313:1313
-    command:
-      - sh
-      - -c
-      - |
-        npm install
-        npm run build
-        hugo server --bind=0.0.0.0
+    command: ["hugo", "server", "--bind=0.0.0.0"]

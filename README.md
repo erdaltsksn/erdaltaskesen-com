@@ -11,7 +11,6 @@ The source code of my personal website/blog.
 ## Requirements
 
 - [Hugo](https://gohugo.io/)
-- [npmjs](https://www.npmjs.com/)
 
 ## Features
 
@@ -28,8 +27,6 @@ The source code of my personal website/blog.
 ```sh
 git clone https://github.com/erdaltsksn/erdaltaskesen-com.git
 cd erdaltaskesen-com
-npm install
-npm run build
 hugo server
 ```
 
@@ -49,29 +46,19 @@ Run the following command to generate static website. The static website output
 will be inside `public` folder.
 
 ```sh
-npm install
-npm run build
 hugo
 ```
 
 ### Deployment and hosting with Netlify
 
 1. Create a new site in Netlify and import your repository.
-2. Set the build command to: `npm run build & hugo`
+2. Set the build command to: `hugo`
 3. Set the publish directory to: `public`
 4. Make sure to set `Build Image` to `Ubuntu Xenial 16.04` or above.
 
 That's it, now your site gets deployed automatically on `git push`.
 
 ## Updating / Upgrading
-
-Run the following command to update npm packages and regenerate the static site.
-
-```sh
-npm update
-npm run build
-hugo
-```
 
 See [Go Hugo Docs](https://gohugo.io/getting-started/installing/#upgrade-hugo)
 for upgrading Hugo.
@@ -84,7 +71,7 @@ Just copy the content of `public` folder to the root of your webserver.
 
 ### Deploying
 
-- **Build command:** `npm run build & hugo`
+- **Build command:** `hugo`
 - **Publish directory:** `public`
 
 ### Creating new contents
@@ -97,8 +84,7 @@ hugo new page/page-name.md
 
 # To Create a new blog post
 hugo new blog/2020-05-12-title-of-the-post.md
-
-# Creating a new blog post via make
+# Creating a new blog post via MAKE
 make post title="this-is-awesome-with-makefile"
 
 # To add a new project
@@ -112,33 +98,11 @@ See official [Hugo Docs](https://gohugo.io/documentation/) to getting help about
 
 ### Make Commands
 
-The followings are the `make` commands that are available.
+Run the following command to show available `make` commands.
 
 ```sh
-make [command]
+make help
 ```
-
-- `"help":` Show this help
-- `"init":` Install Node modules
-- `"fmt":` Run csscomb, sass, autoprefixer, cleancss and more
-- `"run":` Run Hugo's own webserver
-- `"build":` Build Hugo and get static output
-- `"post":` Create a new blog post. USAGE: make blog title="this-is-awesome"
-- `"clean":` Clean all generated files
-
-### NPM Commands
-
-The followings are the `npm` commands that are available.
-
-```sh
-npm run [command]
-```
-
-- `"csscomb":` Format the `css/scss` according to predefined Yandex style.
-- `"sass":` Compile `scss` file to `css`.
-- `"autoprefixer":` Add vendor prefixes to CSS rules using `Can I Use`.
-- `"cleancss":` Optimize and minimize CSS.
-- `"build":` Combination of the four commands above.
 
 ## Contributing
 

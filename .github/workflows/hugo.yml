@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest, windows-latest]
-        node-version: [14.x]
 
     steps:
     - name: Check out code into $GITHUB_WORKSPACE directory
@@ -22,16 +21,9 @@ jobs:
     - name: Set up Hugo
       uses: peaceiris/actions-hugo@v2
       with:
-        hugo-version: '0.74.3'
+        hugo-version: '0.75.1'
         extended: true
-
-    - name: Set up Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2.1.1
-      with:
-        node-version: ${{ matrix.node-version }}
 
     - name: Build Hugo site
       run: |
-        npm install
-        npm run build
         hugo
