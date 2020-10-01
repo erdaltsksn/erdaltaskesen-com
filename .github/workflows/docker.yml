@@ -1,0 +1,23 @@
+name: Docker
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Docker
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+
+    steps:
+    - name: Check out code into $GITHUB_WORKSPACE directory
+      uses: actions/checkout@v2
+
+    - name: Build the Docker image
+      run: |
+        docker-compose up --build --detach
