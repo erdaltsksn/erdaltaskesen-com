@@ -97,11 +97,8 @@ hugo new projects/project-name.md
 See official [Hugo Docs](https://gohugo.io/documentation/) to getting help about
 **Hugo**.
 
-### Make Commands
-
-Run the following command to show available `make` commands.
-
 ```sh
+# Show available `make` commands.
 make help
 ```
 
