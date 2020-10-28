@@ -87,9 +87,6 @@ hugo new page/page-name.md
 hugo new blog/2020-05-12-title-of-the-post.md
 # Creating a new blog post via MAKE
 make post title="this-is-awesome-with-makefile"
-
-# To add a new project
-hugo new projects/project-name.md
 ```
 
 ## Getting Help
