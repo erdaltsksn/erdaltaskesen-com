@@ -8,7 +8,7 @@ DOCKER_CMD := @docker-compose run --service-ports hugo
 
 .PHONY: run
 run: ## Run Hugo's own webserver
-	@docker-compose up --build
+	@docker-compose up
 
 .PHONY: build
 build: ## Build Hugo and get static output
