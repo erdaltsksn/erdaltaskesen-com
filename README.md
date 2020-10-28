@@ -7,7 +7,7 @@
 
 The source code of my personal website/blog.
 
-![Screenshot](/assets/screenshot.png)
+![Screenshot](assets/screenshot.png)
 
 ## Requirements
 
@@ -18,7 +18,6 @@ The source code of my personal website/blog.
 - Hugo based static website
 - Custom Theme
 - Blog
-- Projects
 - Contact Form
 - RSS
 - Sitemap
