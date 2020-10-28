@@ -1,7 +1,7 @@
 # https://github.com/github/gitignore
 
-################################################################################
 ######################### HUGO #################################################
+# https://raw.githubusercontent.com/github/gitignore/master/community/Golang/Hugo.gitignore
 ################################################################################
 # Generated files by hugo
 /public/
