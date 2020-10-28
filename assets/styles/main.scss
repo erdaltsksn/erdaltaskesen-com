@@ -196,45 +196,6 @@ body {
     font-size: 1.25em;
 }
 
-//----------------------- PROJECTS -------------------------------------------//
-
-.projects {
-    @media ($l-up) {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-.project {
-    margin: 0 .5% $spacer;
-
-    @media ($l-up) {
-        width: 49%; // (100% / 2) - (2 * margin)
-    }
-}
-
-.project-title {
-    margin: 0;
-}
-
-.project-status {
-    padding: $spacer;
-
-    text-align: right;
-
-    &.active {
-        background: $success;
-    }
-
-    &.passive {
-        background: $warning;
-    }
-}
-
-.project-image {
-    width: 100%;
-}
-
 //----------------------- BLOG -----------------------------------------------//
 
 .tagcloud {
