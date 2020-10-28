@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Git
+.git
+.gitignore
+.github
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Documentation
+README.md
+
+# Visual Studio Code
+.vscode
+
+# Hugo
+/public/
+/resources/_gen/
