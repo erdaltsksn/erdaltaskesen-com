@@ -1,0 +1,330 @@
+/* ---------------------- VARIABLES ----------------------------------------- */
+:root {
+    --layout-spacer: calc(1% + 2.5px);
+
+    --color-transparent: hsla(0, 0%, 100%, 0);
+    --color-black: hsla(0, 0%, 0%,1);
+    --color-white: hsla(0, 0%, 97%, 1);
+    --color-grey: hsla(0, 0%, 90%, 1);
+    --color-grey-light: hsla(0, 0%, 95%, 1);
+
+    --color-primary: hsl(200, 50%, 50%);
+    --color-primary-light: hsl(200, 100%, 50%);
+
+    --color-mario-blue: hsl(200, 80%, 50%); /* #1aa1e6 */
+    --color-mario-green: hsl(125, 40%, 50%); /* #4db355 */
+    --color-mario-yellow: hsl(50, 100%, 50%); /* #ffd500 */
+    --color-mario-red: hsl(1, 60%, 50%); /* #cc3633 */
+}
+
+
+/* ---------------------- BASE ---------------------------------------------- */
+a {
+    text-decoration: none;
+
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-light);
+}
+
+.mario-blue {
+    color: var(--color-mario-blue);
+    background: var(--color-mario-blue);
+}
+
+.mario-green {
+    color: var(--color-mario-green);
+    background: var(--color-mario-green);
+}
+
+.mario-yellow {
+    color: var(--color-mario-yellow);
+    background: var(--color-mario-yellow);
+}
+
+.mario-red {
+    color: var(--color-mario-red);
+    background: var(--color-mario-red);
+}
+
+body {
+    background: var(--color-white) url('/images/bg-pattern.png');
+}
+
+.wrap {
+    max-width: 1024px;
+    margin: 0 auto;
+
+    background: var(--color-white);
+}
+
+
+/* ---------------------- HEADER -------------------------------------------- */
+.branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: var(--layout-spacer);
+
+    border-bottom: 1px solid var(--color-grey);
+    background: var(--color-grey-light);
+}
+
+.branding-logo {
+    height: 40px;
+}
+
+.branding-social {
+    font-size: 2.5em;
+}
+
+.fab, .fas {
+    background: none !important;
+}
+
+.social-link:hover {
+    text-decoration: none;
+}
+
+
+/* ---------------------- NAVIGATION ---------------------------------------- */
+.primary-nav-list {
+    display: flex;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.primary-nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    padding: var(--layout-spacer) 1%;
+}
+
+.primary-nav-link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    color: var(--color-white);
+}
+
+.primary-nav-link:hover {
+    color: var(--color-black);
+}
+
+.primary-nav-icon {
+    padding-bottom: 0.1em;
+
+    font-size: 1.5em;
+}
+
+.primary-nav-text {
+    font-size: .85em;
+}
+
+
+/* ---------------------- MAIN ---------------------------------------------- */
+.main {
+    padding: 2.5%;
+}
+
+.page-title {
+    margin: 0 0 var(--layout-spacer);
+    border-bottom: 5px dotted var(--color-grey);
+
+    font-family: monospace;
+    font-size: 4em;
+}
+
+.copyright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: var(--layout-spacer);
+
+    text-align: center;
+}
+
+.copyright-line {
+    padding: 0 .1em;
+}
+
+
+/* ---------------------- NOT FOUND & HOME ---------------------------------- */
+.not-found, .profile {
+    margin: 10% 0;
+
+    text-align: center;
+}
+
+.not-found-emoji {
+    font-size: 3em;
+}
+
+.profile-image {
+    max-width: 250px;
+    margin: auto;
+
+    border: 7.5px solid var(--color-grey);
+    border-radius: 50%;
+}
+
+.profile-info {
+    margin: var(--layout-spacer) 0 0;
+}
+
+.profile-info-name {
+    margin: 0;
+
+    word-spacing: -.3em;
+
+    font-family: monospace;
+    font-size: 4em;
+    line-height: 1;
+}
+
+.profile-info-title {
+    font-size: 1.25em;
+}
+
+
+/* ---------------------- BLOG ---------------------------------------------- */
+.highlight > pre {
+    overflow: scroll;
+
+    padding: .5em;
+
+    background: #002b36 !important;
+}
+
+.tagcloud {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: var(--layout-spacer);
+
+    border-radius: var(--layout-spacer);
+    background: var(--color-grey);
+
+    font-weight: bold;
+}
+
+.tagcloud-tag, .tagcloud-label {
+    margin: .15em .25em;
+}
+
+.badge {
+    color: var(--color-primary-light);
+}
+
+.post {
+    margin: 0 0 var(--layout-spacer);
+    padding: var(--layout-spacer) 1%;
+
+    border-bottom: 3px double var(--color-grey);
+}
+
+.post:last-child {
+    border-bottom: 0;
+}
+
+.post-single > .page-title {
+    font-size: 3em;
+}
+
+.post-title {
+    margin: 0;
+}
+
+.post-created {
+    display: inline-block;
+
+    width: 100%;
+    margin: var(--layout-spacer) 0;
+    padding: var(--layout-spacer);
+
+    background: linear-gradient(to right, var(--color-grey), var(--color-transparent));
+}
+
+.pagination {
+    display: flex;
+}
+
+.pagination-prev, .pagination-next {
+    width: 100%;
+    padding: var(--layout-spacer);
+
+    background: var(--color-grey);
+
+    font-size: 1.25em;
+}
+
+.pagination-prev {
+    text-align: left;
+
+    color: #df7514;
+    background: linear-gradient(to right, var(--color-grey), var(--color-transparent));
+}
+
+.pagination-next {
+    text-align: right;
+
+    color: #1cb841;
+    background: linear-gradient(to right, var(--color-transparent), var(--color-grey));
+}
+
+/* ---------------------- CONTACT ------------------------------------------- */
+.contact {
+    padding: 0 2.5%;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 var(--layout-spacer);
+}
+
+label {
+    padding: calc(var(--layout-spacer) / 2) 0;
+}
+
+input, textarea, .radio-list-label {
+    padding: calc(var(--layout-spacer) * 0.75);
+
+    border: 1px solid var(--color-grey);
+}
+
+input:focus, textarea:focus {
+    outline: 1px solid var(--color-primary);
+}
+
+/* Custom Radio list for Subject section */
+.radio-list-input {
+    display: none; /* Hide radio select circle */
+}
+
+.radio-list-label {
+    display: inline-block;
+
+    border-radius: var(--layout-spacer);
+    margin: .1em 0;
+
+    background: var(--color-grey);
+}
+
+.radio-list-input:checked+.radio-list-label,
+input[type='submit'] {
+    color: var(--color-white);
+    background: var(--color-primary);
+}

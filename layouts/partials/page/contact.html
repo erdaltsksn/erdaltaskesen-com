@@ -3,28 +3,35 @@
         <label for="name">Name</label>
         <input id="name" name="name" type="text" value="" required>
     </div>
+
     <div class="form-field">
         <label for="email">Email</label>
         <input id="email" name="email" type="email" value="" required>
     </div>
+
     <div class="form-field">
         <label for="subject">Subject</label>
         <section class="radio-list">
-            <input type="radio" name="subject" id="subject-general" value="general" checked>
-            <label for="subject-general">General</label>
-            <input type="radio" name="subject" id="subject-help" value="help">
-            <label for="subject-help">Help</label>
-            <input type="radio" name="subject" id="subject-other" value="other">
-            <label for="subject-other">Other</label>
+            <input class="radio-list-input" type="radio" name="subject" id="subject-general" value="general" checked>
+            <label class="radio-list-label" for="subject-general">General</label>
+
+            <input class="radio-list-input" type="radio" name="subject" id="subject-help" value="help">
+            <label class="radio-list-label" for="subject-help">Help</label>
+
+            <input class="radio-list-input" type="radio" name="subject" id="subject-other" value="other">
+            <label class="radio-list-label" for="subject-other">Other</label>
         </section>
     </div>
+
     <div class="form-field">
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="10"></textarea>
     </div>
+
     <div class="form-field">
         <div data-netlify-recaptcha="true"></div>
     </div>
+
     <div class="form-field">
         <input class="submit" id="submit" name="submit" type="submit" value="Send">
     </div>
