@@ -2,13 +2,13 @@
 <aside class="pagination">
     {{ if .Paginator.HasPrev }}
     <a href="{{ .Paginator.Prev.URL }}" rel="prev" class="pagination-prev">
-        <i class="pagination-icon fas fa-arrow-alt-circle-left"></i>
+        &#8592;
         <span class="pagination-text">Previous Page</span>
     </a>
     {{ end }}
     {{ if .Paginator.HasNext }}
     <a href="{{ .Paginator.Next.URL }}" rel="next" class="pagination-next">
-        <i class="pagination-icon fas fa-arrow-alt-circle-right"></i>
+        &#8594;
         <span class="pagination-text">Next Page</span>
     </a>
     {{ end }}

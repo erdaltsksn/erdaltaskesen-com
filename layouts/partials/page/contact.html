@@ -1,3 +1,50 @@
+{{ define "stylesheets" }}
+<style>
+    .contact {
+        padding: 0 2.5%;
+    }
+
+    .form-field {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 var(--layout-spacer);
+    }
+
+    label {
+        padding: calc(var(--layout-spacer) / 2) 0;
+    }
+
+    input,
+    textarea,
+    .radio-list-label {
+        padding: calc(var(--layout-spacer) * 0.75);
+        border: 1px solid var(--color-grey);
+    }
+
+    input:focus,
+    textarea:focus {
+        outline: 1px solid var(--color-primary);
+    }
+
+    /* Custom Radio list for Subject section */
+    .radio-list-input {
+        display: none;
+    }
+
+    .radio-list-label {
+        display: inline-block;
+        border-radius: var(--layout-spacer);
+        margin: .1em 0;
+        background: var(--color-grey);
+    }
+
+    .radio-list-input:checked+.radio-list-label,
+    input[type='submit'] {
+        color: var(--color-white);
+        background: var(--color-primary);
+    }
+</style>
+{{ end }}
 <form name="contact" method="post" data-netlify="true" class="contact">
     <div class="form-field">
         <label for="name">Name</label>
