@@ -11,7 +11,393 @@
     <link href="/images/favicon.svg" rel="icon" type="image/svg+xml">
     <link href="/images/favicon.ico" rel="alternate icon">
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/styles/main.css">
+    <style>
+        /* ---------------------- NORMALIZE ----------------------------------------- */
+        /* modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box
+        }
+
+        :root {
+            -moz-tab-size: 4;
+            tab-size: 4
+        }
+
+        html {
+            line-height: 1.15;
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'
+        }
+
+        hr {
+            height: 0;
+            color: inherit
+        }
+
+        abbr[title] {
+            text-decoration: underline dotted
+        }
+
+        b,
+        strong {
+            font-weight: bolder
+        }
+
+        code,
+        kbd,
+        pre,
+        samp {
+            font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+            font-size: 1em
+        }
+
+        small {
+            font-size: 80%
+        }
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        table {
+            text-indent: 0;
+            border-color: inherit
+        }
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            font-size: 100%;
+            line-height: 1.15;
+            margin: 0
+        }
+
+        button,
+        select {
+            text-transform: none
+        }
+
+        [type=button],
+        [type=reset],
+        [type=submit],
+        button {
+            -webkit-appearance: button
+        }
+
+        ::-moz-focus-inner {
+            border-style: none;
+            padding: 0
+        }
+
+        :-moz-focusring {
+            outline: 1px dotted ButtonText
+        }
+
+        :-moz-ui-invalid {
+            box-shadow: none
+        }
+
+        legend {
+            padding: 0
+        }
+
+        progress {
+            vertical-align: baseline
+        }
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto
+        }
+
+        [type=search] {
+            -webkit-appearance: textfield;
+            outline-offset: -2px
+        }
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none
+        }
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            font: inherit
+        }
+
+        summary {
+            display: list-item
+        }
+
+
+        /* ---------------------- VARIABLES ----------------------------------------- */
+        :root {
+            --layout-spacer: calc(1% + 2.5px);
+
+            --color-transparent: hsla(0, 0%, 100%, 0);
+            --color-black: hsla(0, 0%, 0%, 1);
+            --color-white: hsla(0, 0%, 97%, 1);
+            --color-grey: hsla(0, 0%, 90%, 1);
+            --color-grey-light: hsla(0, 0%, 95%, 1);
+
+            --color-primary: hsl(200, 50%, 50%);
+            --color-primary-light: hsl(200, 100%, 50%);
+
+            --color-mario-blue: hsl(200, 80%, 50%);
+            /* #1aa1e6 */
+            --color-mario-green: hsl(125, 40%, 50%);
+            /* #4db355 */
+            --color-mario-yellow: hsl(50, 100%, 50%);
+            /* #ffd500 */
+            --color-mario-red: hsl(1, 60%, 50%);
+            /* #cc3633 */
+        }
+
+
+        /* ---------------------- BASE ---------------------------------------------- */
+        a {
+            text-decoration: none;
+
+            color: var(--color-primary);
+        }
+
+        a:hover {
+            color: var(--color-primary-light);
+        }
+
+        .mario-blue {
+            color: var(--color-mario-blue);
+            background: var(--color-mario-blue);
+        }
+
+        .mario-green {
+            color: var(--color-mario-green);
+            background: var(--color-mario-green);
+        }
+
+        .mario-yellow {
+            color: var(--color-mario-yellow);
+            background: var(--color-mario-yellow);
+        }
+
+        .mario-red {
+            color: var(--color-mario-red);
+            background: var(--color-mario-red);
+        }
+
+        body {
+            background: radial-gradient(#cfd9df 0%, #e2ebf0 100%);
+        }
+
+        .wrap {
+            max-width: 1024px;
+            margin: 0 auto;
+
+            background: var(--color-white);
+        }
+
+
+        /* ---------------------- HEADER -------------------------------------------- */
+        .branding {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: var(--layout-spacer);
+
+            border-bottom: 1px solid var(--color-grey);
+            background: var(--color-grey-light);
+        }
+
+        .branding-social {
+            font-size: 2.5em;
+        }
+
+        .fab,
+        .fas {
+            background: none !important;
+        }
+
+        .social-link:hover {
+            text-decoration: none;
+        }
+
+
+        /* ---------------------- NAVIGATION ---------------------------------------- */
+        .primary-nav-list {
+            display: flex;
+
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        .primary-nav-item {
+            flex-basis: 0;
+            flex-grow: 1;
+            flex-shrink: 1;
+
+            padding: var(--layout-spacer) 1%;
+        }
+
+        .primary-nav-link {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            color: var(--color-white);
+        }
+
+        .primary-nav-link:hover {
+            color: var(--color-white);
+        }
+
+        .primary-nav-text {
+            padding-top: 0.25em;
+            font-size: .85em;
+        }
+
+
+        /* ---------------------- MAIN ---------------------------------------------- */
+        .main {
+            padding: 2.5%;
+        }
+
+        .page-title {
+            margin: 0 0 var(--layout-spacer);
+            border-bottom: 5px dotted var(--color-grey);
+
+            font-family: monospace;
+            font-size: 4em;
+        }
+
+        .copyright {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            padding: var(--layout-spacer);
+
+            text-align: center;
+        }
+
+        .copyright-line {
+            padding: 0 .1em;
+        }
+
+
+        /* ---------------------- BLOG ---------------------------------------------- */
+        .highlight>pre {
+            overflow: scroll;
+
+            padding: .5em;
+
+            background: #002b36 !important;
+        }
+
+        .tagcloud {
+            display: flex;
+            flex-wrap: wrap;
+
+            padding: var(--layout-spacer);
+
+            border-radius: var(--layout-spacer);
+            background: var(--color-grey);
+
+            font-weight: bold;
+        }
+
+        .tagcloud-tag,
+        .tagcloud-label {
+            margin: .15em .25em;
+        }
+
+        .badge {
+            color: var(--color-primary-light);
+        }
+
+        .post {
+            margin: 0 0 var(--layout-spacer);
+            padding: var(--layout-spacer) 1%;
+
+            border-bottom: 3px double var(--color-grey);
+        }
+
+        .post:last-child {
+            border-bottom: 0;
+        }
+
+        .post-single>.page-title {
+            font-size: 3em;
+        }
+
+        .post-title {
+            margin: 0;
+        }
+
+        .post-created {
+            display: inline-block;
+
+            width: 100%;
+            margin: var(--layout-spacer) 0;
+            padding: var(--layout-spacer);
+
+            background: linear-gradient(to right, var(--color-grey), var(--color-transparent));
+        }
+
+        .pagination {
+            display: flex;
+        }
+
+        .pagination-prev,
+        .pagination-next {
+            width: 100%;
+            padding: var(--layout-spacer);
+
+            background: var(--color-grey);
+
+            font-size: 1.25em;
+        }
+
+        .pagination-prev {
+            text-align: left;
+
+            color: #df7514;
+            background: linear-gradient(to right, var(--color-grey), var(--color-transparent));
+        }
+
+        .pagination-next {
+            text-align: right;
+
+            color: #1cb841;
+            background: linear-gradient(to right, var(--color-transparent), var(--color-grey));
+        }
+    </style>
     {{ block "stylesheets" . }}{{ end }}
     <!-- RSS Links -->
     <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
