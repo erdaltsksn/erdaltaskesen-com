@@ -1,9 +1,13 @@
+######################### COMMON ###############################################
+# https://raw.githubusercontent.com/erdaltsksn/dockerignore/main/templates/Common.gitignore
+################################################################################
 # macOS
 .DS_Store
 
 # Git
 .git
 .gitignore
+.gitattributes
 .github
 
 # Docker
@@ -13,10 +17,17 @@ docker-compose.yml
 
 # Documentation
 README.md
+CHANGELOG.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
 
 # Visual Studio Code
 .vscode
 
+######################### HUGO #################################################
+# https://raw.githubusercontent.com/erdaltsksn/dockerignore/main/templates/Hugo.gitignore
+################################################################################
 # Hugo
 /public/
 /resources/_gen/
