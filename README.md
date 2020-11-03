@@ -18,7 +18,6 @@ The source code of my personal website/blog.
 - Hugo based static website
 - Custom Theme
 - Blog
-- Contact Form
 - RSS
 - Sitemap
 
