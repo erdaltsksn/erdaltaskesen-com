@@ -1,9 +1,0 @@
-{{ range (.Paginator 10).Pages }}
-<article class="post">
-    <h2 class="post-title">
-        <a href="{{ .RelPermalink }}" class="post-link">{{ .Title }}</a>
-    </h2>
-    <span class="post-created">{{ .Date.Format "02 January 2006" }}</span>
-    <div class="post-body">{{ .Summary }}</div>
-</article>
-{{ end }}

@@ -8,38 +8,26 @@
 
     <title>{{ .Title }}</title>
     <!-- Favicons -->
-    <link href="/images/favicon.svg" rel="icon" type="image/svg+xml">
+    <link href="/images/logo.svg" rel="icon" type="image/svg+xml">
     <link href="/images/favicon.ico" rel="alternate icon">
     <!-- Stylesheets -->
     <style>
-        /* ---------------------- VARIABLES ----------------------------------------- */
         :root {
             --layout-spacer: calc(1% + 2.5px);
+            --layout-spacer-half: calc(var(--layout-spacer) / 2);
+            --layout-spacer-double: calc(var(--layout-spacer) * 2);
 
             --color-transparent: hsla(0, 0%, 100%, 0);
-            --color-black: hsla(0, 0%, 0%, 1);
             --color-white: hsla(0, 0%, 97%, 1);
             --color-grey: hsla(0, 0%, 90%, 1);
             --color-grey-light: hsla(0, 0%, 95%, 1);
 
-            --color-primary: hsl(200, 50%, 50%);
-            --color-primary-light: hsl(200, 100%, 50%);
-
-            --color-mario-blue: hsl(200, 80%, 50%);
-            /* #1aa1e6 */
-            --color-mario-green: hsl(125, 40%, 50%);
-            /* #4db355 */
-            --color-mario-yellow: hsl(50, 100%, 50%);
-            /* #ffd500 */
-            --color-mario-red: hsl(1, 60%, 50%);
-            /* #cc3633 */
+            --color-primary: hsl(201deg 78% 46%);
+            --color-primary-light: hsl(201deg 80% 51%);
         }
 
-
-        /* ---------------------- BASE ---------------------------------------------- */
         a {
             text-decoration: none;
-
             color: var(--color-primary);
         }
 
@@ -47,327 +35,84 @@
             color: var(--color-primary-light);
         }
 
-        .mario-blue {
-            color: var(--color-mario-blue);
-            background: var(--color-mario-blue);
-        }
-
-        .mario-green {
-            color: var(--color-mario-green);
-            background: var(--color-mario-green);
-        }
-
-        .mario-yellow {
-            color: var(--color-mario-yellow);
-            background: var(--color-mario-yellow);
-        }
-
-        .mario-red {
-            color: var(--color-mario-red);
-            background: var(--color-mario-red);
-        }
-
-        body {
-            margin: 0;
-            background: radial-gradient(#cfd9df 0%, #e2ebf0 100%);
-        }
-
-        .wrap {
-            max-width: 1024px;
-            margin: 0 auto;
-
-            background: var(--color-white);
-        }
-
-
-        /* ---------------------- HEADER -------------------------------------------- */
-        .branding {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: var(--layout-spacer);
-
-            border-bottom: 1px solid var(--color-grey);
-            background: var(--color-grey-light);
-        }
-
-        .branding-social {
-            font-size: 2.5em;
-        }
-
-        .fab,
-        .fas {
-            background: none !important;
-        }
-
-        .social-link:hover {
-            text-decoration: none;
-        }
-
-
-        /* ---------------------- NAVIGATION ---------------------------------------- */
-        .primary-nav-list {
-            display: flex;
-
-            margin: 0;
-            padding: 0;
-
-            list-style: none;
-        }
-
-        .primary-nav-item {
-            flex-basis: 0;
-            flex-grow: 1;
-            flex-shrink: 1;
-
-            padding: var(--layout-spacer) 1%;
-        }
-
-        .primary-nav-link {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-
-            color: var(--color-white);
-        }
-
-        .primary-nav-link:hover {
-            color: var(--color-white);
-        }
-
-        .primary-nav-text {
-            padding-top: 0.25em;
-            font-size: .85em;
-        }
-
-
-        /* ---------------------- MAIN ---------------------------------------------- */
-        .main {
-            padding: 2.5%;
-        }
-
-        .page-title {
-            margin: 0 0 var(--layout-spacer);
-            border-bottom: 5px dotted var(--color-grey);
-
-            font-family: monospace;
-            font-size: 4em;
-        }
-
-        .copyright {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            padding: var(--layout-spacer);
-
-            text-align: center;
-        }
-
-        .copyright-line {
-            padding: 0 .1em;
-        }
-
-
-        /* ---------------------- BLOG ---------------------------------------------- */
         .highlight>pre {
             overflow: scroll;
-
             padding: .5em;
-
             background: #002b36 !important;
         }
 
-        .tagcloud {
-            display: flex;
-            flex-wrap: wrap;
-
-            padding: var(--layout-spacer);
-
-            border-radius: var(--layout-spacer);
-            background: var(--color-grey);
-
-            font-weight: bold;
-        }
-
-        .tagcloud-tag,
-        .tagcloud-label {
-            margin: .15em .25em;
-        }
-
-        .badge {
-            color: var(--color-primary-light);
-        }
-
-        .post {
-            margin: 0 0 var(--layout-spacer);
-            padding: var(--layout-spacer) 1%;
-
-            border-bottom: 3px double var(--color-grey);
-        }
-
-        .post:last-child {
-            border-bottom: 0;
-        }
-
-        .post-single>.page-title {
-            font-size: 3em;
+        .tag {
+            display: inline-block;
+            margin: .25em;
         }
 
         .post-title {
-            margin: 0;
+            margin: var(--layout-spacer-double) 0 var(--layout-spacer-half);
         }
 
         .post-created {
             display: inline-block;
-
             width: 100%;
-            margin: var(--layout-spacer) 0;
-            padding: var(--layout-spacer);
-
+            padding: var(--layout-spacer-half);
             background: linear-gradient(to right, var(--color-grey), var(--color-transparent));
-        }
-
-        .pagination {
-            display: flex;
-        }
-
-        .pagination-prev,
-        .pagination-next {
-            width: 100%;
-            padding: var(--layout-spacer);
-
-            background: var(--color-grey);
-
-            font-size: 1.25em;
-        }
-
-        .pagination-prev {
-            text-align: left;
-
-            color: #df7514;
-            background: linear-gradient(to right, var(--color-grey), var(--color-transparent));
-        }
-
-        .pagination-next {
-            text-align: right;
-
-            color: #1cb841;
-            background: linear-gradient(to right, var(--color-transparent), var(--color-grey));
         }
     </style>
-    {{ block "stylesheets" . }}{{ end }}
     <!-- RSS Links -->
     <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     <link href="/rss.xml" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
 </head>
 
-<body>
-    <div class="wrap">
-        <header class="branding">
-            <svg xmlns="http://www.w3.org/2000/svg" width="137" height="40" viewBox="0 0 343.8 100.1">
-                <g transform="translate(-251.5 -413.6)">
-                    <path
-                        d="M5.4-74.5h49L50.3-53.8,26.2-50.1,25.9-45l21.3,1.6-1,15.9-19,1.7,1.7,5.4,23.1.2L60.5-.3H5.4L0-48.1Zm93.4.6,18.5,13.5L119-37.1,108.6-25.5,127.1-9.2,105.4.2,82.7-19.2,86.1.1h-23L57.3-70.7ZM82.7-53.2,82.1-39l6.1.8L94.3-47Zm79.1-21.2,21,17.2,4.3,40.1L166.4-.2H125V-69.9ZM147.9-47.7v21.8l13.5-4.7V-41.5Zm85.5-26.4L265-5.2,234.8-.4l-2.4-17.7-24.3-.6L202.6.2,173.5-5l39.9-67.1ZM218.5-47.9l-4.1,10.2,15.3.4-3.5-10.3Zm69.7-23.8-2.9,44.8L316-30.6l2.8,23.1L263.2-.9l-2.8-74Z"
-                        transform="translate(264 501)" fill="#f80bef" stroke="#000" stroke-linejoin="round"
-                        stroke-width="25" />
-                    <path
-                        d="M5.4-74.5h49L50.3-53.8,26.2-50.1,25.9-45l21.3,1.6-1,15.9-19,1.7,1.7,5.4,23.1.2L60.5-.3H5.4L0-48.1Z"
-                        transform="translate(264 501)" fill="#1aa1e6" />
-                    <path
-                        d="M41.5-73.9,60-60.4l1.7,23.3L51.3-25.5,69.8-9.2,48.1.2,25.4-19.2,28.8.1H5.8L0-70.7ZM25.4-53.2,24.8-39l6.1.8L37-47Z"
-                        transform="translate(321.3 501)" fill="#4db355" />
-                    <path d="M36.8-74.4l21,17.2,4.3,40.1L41.4-.2H0V-69.9ZM22.9-47.7v21.8l13.5-4.7V-41.5Z"
-                        transform="translate(389 501)" fill="#ffd500" />
-                    <path
-                        d="M44.9-74.1,76.5-5.2,46.3-.4,43.9-18.1l-24.3-.6L14.1.2-15-5,24.9-72.1ZM30-47.9,25.9-37.7l15.3.4L37.7-47.6Z"
-                        transform="translate(452.5 501)" fill="#cc3633" />
-                    <path d="M27.8-71.7,24.9-26.9l30.7-3.7L58.4-7.5,2.8-.9,0-74.9Z" transform="translate(524.3 501)"
-                        fill="#4db355" />
-                </g>
-            </svg>
+<body style="
+    margin: 0;
+    background: radial-gradient(#cfd9df 0%, #e2ebf0 100%);
+    font-family: monospace;
+    font-size: 1.5em;
+">
+    <div style="
+        max-width: 960px;
+        margin: 0 auto;
+        margin-top: var(--layout-spacer-double);
+        box-shadow: 0px 0px 20px 0px hsla(0, 0%, 0%, 0.25);
+        border-radius: var(--layout-spacer-half);
+        background: var(--color-white);
+    ">
+        <header style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--layout-spacer);
+            padding: var(--layout-spacer-half) var(--layout-spacer-double);
+            border-bottom: 1px solid var(--color-grey);
+        ">
+            <a href="/">
+                <img src="/images/logo.svg" alt="Erdal TAŞKESEN" height="50px">
+            </a>
 
-            <div class="branding-social">
-                <a href="https://www.linkedin.com/in/erdaltsksn" target="_blank" class="social-link">
-                    <svg class="mario-blue" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
-                        style="padding:6px;border-radius:5px;" viewBox="0 0 35 35">
-                        <path
-                            d="M7.834,35.01H.578V11.642H7.834ZM4.2,8.455A4.222,4.222,0,1,1,8.4,4.212,4.238,4.238,0,0,1,4.2,8.455ZM34.992,35.01H27.752V23.635c0-2.711-.055-6.188-3.773-6.188-3.773,0-4.351,2.945-4.351,5.992V35.01H12.38V11.642h6.959V14.83h.1a7.625,7.625,0,0,1,6.866-3.774C33.65,11.056,35,15.892,35,22.174V35.01Z"
-                            transform="translate(0 -0.01)" fill="#fff" />
-                    </svg>
-                </a>
-                <a href="https://github.com/erdaltsksn" target="_blank" class="social-link">
-                    <svg class="mario-green" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
-                        style="padding:6px;border-radius:5px;" viewBox="0 0 35 35">
-                        <path
-                            d="m11.707 36.182c0 .145-.162.261-.367.261-.233.022-.4-.094-.4-.261 0-.145.162-.261.367-.261.216-.021.4.094.4.261zm-2.195-.326c-.049.145.092.311.3.355a.327.327 0 0 0 .438-.145c.042-.145-.092-.311-.3-.376a.358.358 0 0 0 -.438.166zm3.119-.123c-.2.051-.346.188-.325.355.021.145.2.239.416.188s.346-.188.325-.333-.211-.231-.416-.21zm4.643-27.733c-9.787 0-17.274 7.621-17.274 17.659a18.118 18.118 0 0 0 11.961 17.312c.9.166 1.221-.405 1.221-.876 0-.449-.021-2.924-.021-4.444 0 0-4.94 1.086-5.977-2.157 0 0-.8-2.106-1.962-2.649 0 0-1.616-1.136.113-1.115a3.71 3.71 0 0 1 2.723 1.87 3.678 3.678 0 0 0 5.142 1.511 4.062 4.062 0 0 1 1.129-2.439c-3.945-.449-7.924-1.035-7.924-8a5.557 5.557 0 0 1 1.665-4.263 7 7 0 0 1 .186-4.909c1.475-.47 4.869 1.954 4.869 1.954a16.269 16.269 0 0 1 8.863 0s3.394-2.432 4.869-1.954a7 7 0 0 1 .183 4.914 5.691 5.691 0 0 1 1.821 4.263c0 6.984-4.156 7.541-8.1 8a4.339 4.339 0 0 1 1.2 3.358c0 2.439-.021 5.457-.021 6.05 0 .47.325 1.042 1.221.876 7.055-2.408 11.839-9.276 11.839-17.302a17.514 17.514 0 0 0 -17.726-17.659zm-10.415 24.961c-.092.072-.071.239.049.376.113.116.275.166.367.072.092-.072.071-.239-.049-.376-.113-.115-.275-.166-.367-.072zm-.759-.586c-.049.094.021.21.162.282a.207.207 0 0 0 .3-.051c.049-.094-.021-.21-.162-.282-.141-.043-.254-.024-.3.051zm2.286 2.576c-.113.094-.071.311.092.449.162.166.367.188.459.072.092-.094.049-.311-.092-.449-.159-.165-.37-.187-.462-.071zm-.8-1.064c-.113.072-.113.261 0 .427s.3.239.4.166a.336.336 0 0 0 0-.449c-.111-.165-.294-.237-.407-.143z"
-                            fill="#fff" transform="translate(0 -8)" />
-                    </svg>
-                </a>
-                <a href="/rss.xml" class="social-link">
-                    <svg class="mario-yellow" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
-                        style="padding:6px;border-radius:5px;" viewBox="0 0 35 35">
-                        <path
-                            d="M10.006,62a5,5,0,1,1-5-5A5,5,0,0,1,10.006,62ZM23.73,65.688A23.756,23.756,0,0,0,1.312,43.27,1.249,1.249,0,0,0,0,44.519v3.755a1.251,1.251,0,0,0,1.163,1.251,17.505,17.505,0,0,1,16.31,16.31A1.251,1.251,0,0,0,18.725,67H22.48a1.249,1.249,0,0,0,1.25-1.312ZM35,65.71A35.024,35.024,0,0,0,1.289,32,1.249,1.249,0,0,0,0,33.251v3.755a1.254,1.254,0,0,0,1.207,1.25A28.755,28.755,0,0,1,28.744,65.792,1.254,1.254,0,0,0,29.993,67h3.755A1.249,1.249,0,0,0,35,65.71Z"
-                            transform="translate(0 -32)" fill="#fff" />
-                    </svg>
-                </a>
-                <a href="mailto:contact@erdaltaskesen.com" class="social-link">
-                    <svg class="mario-red" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
-                        style="padding:6px;border-radius:5px;" viewBox="0 0 35 35">
-                        <path
-                            d="M12.031,14.763H22.969a1.093,1.093,0,0,0,1.094-1.094V12.575a1.093,1.093,0,0,0-1.094-1.094H12.031a1.093,1.093,0,0,0-1.094,1.094v1.094A1.093,1.093,0,0,0,12.031,14.763Zm-1.094,5.469a1.093,1.093,0,0,0,1.094,1.094H22.969a1.093,1.093,0,0,0,1.094-1.094V19.138a1.093,1.093,0,0,0-1.094-1.094H12.031a1.093,1.093,0,0,0-1.094,1.094Zm6.563,8.28a5.461,5.461,0,0,1-3.2-1.038L0,17.146v14.57A3.281,3.281,0,0,0,3.281,35H31.719A3.281,3.281,0,0,0,35,31.716V17.146L20.7,27.473a5.466,5.466,0,0,1-3.2,1.038ZM33.743,11.136c-.6-.474-1.179-.921-2.024-1.559V6.56a3.281,3.281,0,0,0-3.281-3.281h-5.3l-.618-.448C21.369,1.991,19.086-.027,17.5,0c-1.586-.024-3.868,1.994-5.018,2.833l-.618.448h-5.3A3.281,3.281,0,0,0,3.281,6.56V9.577c-.846.638-1.419,1.085-2.024,1.559A3.281,3.281,0,0,0,0,13.718v.728l6.563,4.741V6.56H28.438V19.187L35,14.446v-.728a3.281,3.281,0,0,0-1.257-2.582Z"
-                            transform="translate(0 0.003)" fill="#fff" />
-                    </svg>
-                </a>
-            </div>
+            <nav>
+                <a href="/blog/" style="
+                    padding: var(--layout-spacer);
+                    font-size: 1.25em;
+                    font-family: monospace;
+                    font-weight: bold;
+                ">BLOG</a>
+            </nav>
         </header>
 
-        <nav class="primary-nav">
-            <ul class="primary-nav-list">
-                <li class="primary-nav-item mario-blue">
-                    <a href="/" class="primary-nav-link">
-                        <svg height="21" viewBox="0 0 30 23" width="27" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="m14.587 38.017-9.6 7.8v8.415a.827.827 0 0 0 .833.822l5.836-.015a.827.827 0 0 0 .829-.822v-4.917a.827.827 0 0 1 .833-.822h3.332a.827.827 0 0 1 .833.822v4.91a.816.816 0 0 0 .243.583.839.839 0 0 0 .59.242l5.834.016a.827.827 0 0 0 .833-.822v-8.421l-9.6-7.791a.642.642 0 0 0 -.796 0zm15.167 5.3-4.354-3.539v-7.112a.621.621 0 0 0 -.625-.616h-2.916a.621.621 0 0 0 -.625.616v3.728l-4.663-3.782a2.527 2.527 0 0 0 -3.177 0l-13.183 10.704a.61.61 0 0 0 -.083.868l1.328 1.592a.631.631 0 0 0 .881.084l12.25-9.948a.642.642 0 0 1 .8 0l12.251 9.948a.631.631 0 0 0 .88-.082l1.328-1.592a.61.61 0 0 0 -.089-.869z"
-                                fill="#fff" transform="translate(.015 -32.05)" /></svg>
-                        <span class="primary-nav-text">Home</span>
-                    </a>
-                </li>
-                <li class="primary-nav-item mario-yellow">
-                    <a href="/blog/" class="primary-nav-link">
-                        <svg height="21" viewBox="0 0 30 23" width="27" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="m28.75 64h-24.167a1.354 1.354 0 0 0 -1.25 1.438v.479h-2.083a1.354 1.354 0 0 0 -1.25 1.437v16.292a3.158 3.158 0 0 0 2.917 3.354h24.583a2.707 2.707 0 0 0 2.5-2.875v-18.687a1.354 1.354 0 0 0 -1.25-1.438zm-25.833 20.125a.451.451 0 0 1 -.417-.479v-14.854h.833v14.854a.451.451 0 0 1 -.416.479zm12.292-.958h-7.917a.677.677 0 0 1 -.625-.719v-.479a.677.677 0 0 1 .625-.719h7.917a.677.677 0 0 1 .625.719v.479a.677.677 0 0 1 -.626.719zm10.833 0h-7.917a.677.677 0 0 1 -.625-.719v-.479a.677.677 0 0 1 .625-.719h7.917a.677.677 0 0 1 .625.719v.479a.677.677 0 0 1 -.625.719zm-10.833-5.75h-7.917a.677.677 0 0 1 -.625-.719v-.479a.677.677 0 0 1 .625-.719h7.917a.677.677 0 0 1 .625.719v.481a.677.677 0 0 1 -.626.717zm10.833 0h-7.917a.677.677 0 0 1 -.625-.717v-.479a.677.677 0 0 1 .625-.719h7.917a.677.677 0 0 1 .625.719v.479a.677.677 0 0 1 -.625.717zm0-5.75h-18.75a.677.677 0 0 1 -.625-.719v-2.4a.677.677 0 0 1 .625-.719h18.75a.677.677 0 0 1 .625.719v2.4a.677.677 0 0 1 -.625.719z"
-                                fill="#fff" transform="translate(0 -64)" /></svg>
-                        <span class="primary-nav-text">Blog</span>
-                    </a>
-                </li>
-                <li class="primary-nav-item mario-red">
-                    <a href="/contact/" class="primary-nav-link">
-                        <svg height="21" viewBox="0 0 30 23" width="27" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="m29.432 71.595a.352.352 0 0 1 .568.282v12.248a2.845 2.845 0 0 1 -2.812 2.875h-24.375a2.845 2.845 0 0 1 -2.813-2.875v-12.243a.35.35 0 0 1 .568-.282c1.312 1.042 3.053 2.366 9.029 6.8 1.236.922 3.322 2.863 5.4 2.851 2.092.018 4.219-1.965 5.408-2.851 5.98-4.433 7.714-5.763 9.027-6.805zm-14.432 7.738c1.359.024 3.316-1.749 4.3-2.48 7.775-5.768 8.367-6.271 10.16-7.709a1.445 1.445 0 0 0 .54-1.131v-1.138a2.845 2.845 0 0 0 -2.812-2.875h-24.375a2.845 2.845 0 0 0 -2.813 2.875v1.138a1.454 1.454 0 0 0 .539 1.132c1.793 1.432 2.385 1.941 10.16 7.709.985.73 2.942 2.503 4.301 2.479z"
-                                fill="#fff" transform="translate(0 -64)" /></svg>
-                        <span class="primary-nav-text">Contact</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <main class="main">
+        <main style="
+            padding: var(--layout-spacer-double);
+        ">
             {{ block "main" . }}{{ end }}
         </main>
     </div>
 
-    <div class="copyright">
-        <span class="copyright-line">
-            Copyright © 1988-{{ now.Format "2006"}} by <a href="/"><strong>{{ .Site.Title }}</strong></a>.
-        </span>
-        <span class="copyright-line">All Rights Reserved.</span>
-    </div>
+    <footer style="
+        margin: var(--layout-spacer);
+        text-align: center;
+        font-size: .75em;
+    ">
+        Copyright © 1988-{{ now.Format "2006"}} by <a href="/"><strong>Erdal TAŞKESEN</strong></a>.
+        All Rights Reserved.
+    </footer>
 </body>
 
 </html>

@@ -1,7 +1,49 @@
 {{ define "main" }}
-<div class="not-found">
-    <h1 class="page-title">Error - Layout</h1>
+<div>
+    <section style="
+        background: var(--color-grey-light);
+        border: 1px solid var(--color-grey);
+        text-align: justify;
+    ">
+        {{ range $.Site.Taxonomies.tags.ByCount }}
+        {{ if .Term }}
+        {{ if ge .Count 1 }}
+        <a class="tag" href="/blog/tag/{{ .Term }}">
+            {{ .Term }}(<span>{{ .Count }}</span>)
+        </a>
+        {{ end }}
+        {{ end }}
+        {{ end}}
+    </section>
 
-    <p class="not-found-text">found no layout file for 'HTML' for kind 'section':</p>
+    {{ range (.Paginator 10).Pages }}
+    <article class="post">
+        <h2 class="post-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        <span class="post-created">{{ .Date.Format "02 January 2006" }}</span>
+        <div>{{ .Summary }}</div>
+    </article>
+    {{ end }}
 </div>
+
+{{ if or .Paginator.HasPrev .Paginator.HasNext }}
+<aside style="
+    display: flex;
+    justify-content: space-between;
+    border-top: 5px double var(--color-grey);
+    padding: var(--layout-spacer);
+">
+    {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}" rel="prev">
+        &#8592; Previous Page
+    </a>
+    {{ end }}
+    {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}" rel="next">
+        &#8594; Next Page
+    </a>
+    {{ end }}
+</aside>
+{{ end }}
 {{ end }}

@@ -1,5 +1,0 @@
-{{ define "main" }}
-<h1 class="page-title">{{ .Title | upper }}</h1>
-{{ $template := (print "page/" (.Title | lower)) }}
-{{ partial $template .}}
-{{ end }}

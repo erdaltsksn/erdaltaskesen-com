@@ -1,7 +1,14 @@
 {{ define "main" }}
-<div class="not-found">
-    <h1 class="page-title">Error - Layout</h1>
+<article class="post">
+    <h1 class="post-title">{{ .Title }}</h1>
+    <span class="post-created">{{ .Date.Format "02 January 2006" }}</span>
+    <div>{{ .Content }}</div>
 
-    <p class="not-found-text">found no layout file for 'HTML' for kind 'page':</p>
-</div>
+    <section>
+        <span>Tags:</span>
+        {{ range .Params.tags }}
+        <a href="/blog/tag/{{ . }}">{{ . }}</a>
+        {{ end }}
+    </section>
+</article>
 {{ end }}
