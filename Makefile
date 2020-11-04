@@ -21,4 +21,4 @@ post: ## Create a new blog post. USAGE: make post title="this-is-awesome"
 .PHONY: clean
 clean: ## Clean all generated files
 	rm -rf ./resources/_gen/
-	find ./public/ ! -name "public" ! -name "_redirects" | xargs rm -rf
+	find ./public/
