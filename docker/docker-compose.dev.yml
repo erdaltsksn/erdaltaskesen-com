@@ -3,9 +3,10 @@ version: '3'
 services:
   hugo:
     build:
-      context: .
+      context: ..
+      dockerfile: docker/Dockerfile.dev
     volumes:
-      - .:/app
+      - ..:/app
     ports:
       - 1313:1313
     command: [ "hugo", "server", "--bind=0.0.0.0" ]

@@ -29,15 +29,15 @@ cd erdaltaskesen-com
 hugo server
 ```
 
-You can visit the website at [http://localhost:1313/](http://localhost:1313/)
-
 ### Via Docker
 
 ```sh
 git clone https://github.com/erdaltsksn/erdaltaskesen-com.git
 cd erdaltaskesen-com
-docker-compose up
+make hugo
 ```
+
+You can visit the website at [http://localhost:1313/](http://localhost:1313/)
 
 ## Installation
 
@@ -78,22 +78,23 @@ Just copy the content of `public` folder to the root of your webserver.
 You can use the following command to create a new content.
 
 ```sh
-# To create a new static page
-hugo new page/page-name.md
-
 # To Create a new blog post
 hugo new blog/2020-05-12-title-of-the-post.md
+
 # Creating a new blog post via MAKE
 make post title="this-is-awesome-with-makefile"
 ```
 
 ## Getting Help
 
+### Help for Hugo
+
 See official [Hugo Docs](https://gohugo.io/documentation/) to getting help about
 **Hugo**.
 
+### Help for Makefile
+
 ```sh
-# Show available `make` commands.
 make help
 ```
 

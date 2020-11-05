@@ -4,11 +4,15 @@
 help: ## Show this help
 	@egrep -h '\s##\s' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
 
-DOCKER_CMD := @docker-compose run --service-ports hugo
+DOCKER_CMD := @docker-compose -f ./docker/docker-compose.dev.yml run --service-ports hugo
 
-.PHONY: run
-run: ## Run Hugo's own webserver
-	@docker-compose up
+.PHONY: hugo
+hugo: ## Run Hugo's own webserver
+	@docker-compose -f ./docker/docker-compose.dev.yml up
+
+.PHONY: nginx
+nginx: ## Serve website with nginx
+	@docker-compose -f ./docker/docker-compose.prod.yml up
 
 .PHONY: build
 build: ## Build Hugo and get static output
