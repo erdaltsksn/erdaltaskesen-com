@@ -8,11 +8,11 @@ DOCKER_CMD := @docker-compose -f ./docker/docker-compose.dev.yml run --service-p
 
 .PHONY: hugo
 hugo: ## Run Hugo's own webserver
-	@docker-compose -f ./docker/docker-compose.dev.yml up
+	@docker-compose -f ./docker/docker-compose.dev.yml up --build --force-recreate --remove-orphans
 
 .PHONY: nginx
 nginx: ## Serve website with nginx
-	@docker-compose -f ./docker/docker-compose.prod.yml up
+	@docker-compose -f ./docker/docker-compose.prod.yml up --build --force-recreate --remove-orphans
 
 .PHONY: build
 build: ## Build Hugo and get static output
