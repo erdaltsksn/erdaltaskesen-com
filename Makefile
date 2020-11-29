@@ -6,6 +6,11 @@ help: ## Show this help
 
 DOCKER_CMD := @docker-compose -f ./docker/docker-compose.dev.yml run --service-ports hugo
 
+.PHONY: clean
+clean: ## Clean all generated files
+	rm -rf ./resources/_gen/
+	find ./public/
+
 .PHONY: hugo
 hugo: ## Run Hugo's own webserver
 	@docker-compose -f ./docker/docker-compose.dev.yml up --build --force-recreate --remove-orphans
@@ -21,8 +26,3 @@ build: ## Build Hugo and get static output
 .PHONY: post
 post: ## Create a new blog post. USAGE: make post title="this-is-awesome"
 	$(DOCKER_CMD) hugo new blog/$$(date +%Y-%m-%d)-$(title).md
-
-.PHONY: clean
-clean: ## Clean all generated files
-	rm -rf ./resources/_gen/
-	find ./public/
