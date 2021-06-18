@@ -35,13 +35,19 @@
     padding: var(--layout-spacer);
 ">
     {{ if .Paginator.HasPrev }}
-    <a href="{{ .Paginator.Prev.URL }}" rel="prev">
+    <a href="{{ .Paginator.Prev.URL }}" rel="prev" style="
+    width: 100%;
+    text-align: left;
+">
         &#8592; Previous Page
     </a>
     {{ end }}
     {{ if .Paginator.HasNext }}
-    <a href="{{ .Paginator.Next.URL }}" rel="next">
-        &#8594; Next Page
+    <a href="{{ .Paginator.Next.URL }}" rel="next" style="
+    width: 100%;
+    text-align: right;
+">
+        Next Page &#8594;
     </a>
     {{ end }}
 </aside>
